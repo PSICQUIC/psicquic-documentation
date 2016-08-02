@@ -1,5 +1,3 @@
-
-
 # Java clients #
 
 There are two JAVA clients provided by the project at the moment:
@@ -30,31 +28,23 @@ This client is the simplest way to access the services using Java. It provides n
 If you are using Maven, include the following in your project:
 
   * Latest release version (recommended)
-```
-<dependencies>
-...
 
+```
       <dependency>
           <groupId>org.hupo.psi.mi.psicquic</groupId>
           <artifactId>psicquic-simple-client</artifactId>
           <version>1.3.3</version>
       </dependency>
-
-</dependencies>
 ```
 
   * Current version under development
-```
-<dependencies>
-...
 
+```
       <dependency>
           <groupId>org.hupo.psi.mi.psicquic</groupId>
           <artifactId>psicquic-simple-client</artifactId>
           <version>1.3.4-SNAPSHOT</version>
       </dependency>
-
-</dependencies>
 ```
 
 As of now, this dependency is hosted at the European Bioinformatics Institute (EBI) repository. You can add this repository in your `pom.xml` file like this:
@@ -71,7 +61,7 @@ As of now, this dependency is hosted at the European Bioinformatics Institute (E
 
 ### Examples of Use ###
 
-You can find different examples in [this folder](http://code.google.com/p/psicquic/source/browse/trunk/#trunk/psicquic-simple-client/src/example/java/org/hupo/psi/mi/psicquic/wsclient).
+You can find different examples in [this folder](https://github.com/PSICQUIC/psicquic-simple-client/tree/master/src/example/java/org/hupo/psi/mi/psicquic/wsclient).
 
 ## PSICQUIC Client (Standard) ##
 
@@ -80,31 +70,23 @@ A JAVA client is provided already by this project. If your project is using [Mav
 Include the following dependency in your project:
 
   * Latest released version
-```
-<dependencies>
-...
 
+```
       <dependency>
           <groupId>org.hupo.psi.mi.psicquic</groupId>
           <artifactId>psicquic-client</artifactId>
           <version>1.5.3</version>
       </dependency>
-
-</dependencies>
 ```
 
   * Current version under development
-```
-<dependencies>
-...
 
+```
       <dependency>
           <groupId>org.hupo.psi.mi.psicquic</groupId>
           <artifactId>psicquic-client</artifactId>
           <version>1.5.4-SNAPSHOT</version>
       </dependency>
-
-</dependencies>
 ```
 
 As of now, this dependency is hosted at the European Bioinformatics Institute (EBI) repository. You can add this repository in your `pom.xml` file like this:
