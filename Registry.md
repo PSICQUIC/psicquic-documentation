@@ -8,7 +8,7 @@ The registry also shows the number of total binary interactions that each resour
 
 There are different ways to access the service, depending if you just want to have a quick look or have an application that want to check the services status programmatically. The URL to access the Registry is RESTful, and follows this syntax:
 
-<img width='800' src='https://github.com/MICommunity/psicquic/blob/master/images/PSICQUIC_REGISTRY_REST_URL-2.png' />
+![PSICQUIC registry REST URL](/images/PSICQUIC_REGISTRY_REST_URL-2.png)
 
 Except for the `action` parameter, the rest are optional. The following tables show what values are available for each parameter:
 
