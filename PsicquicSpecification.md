@@ -2,9 +2,7 @@
 
 PSICQUIC is an effort from the [HUPO Proteomics Standard Initiative](http://www.psidev.info/) (HUPO-PSI) to **standardise** the access to **molecular interaction** databases programmatically.
 
-<p align='center'>
-<img src='http://psicquic.googlecode.com/svn/wiki/images/psicquic.png' />
-</p>
+![psicquic architecture](/images/psicquic.png)
 
 Basically, PSICQUIC specifies:
 
