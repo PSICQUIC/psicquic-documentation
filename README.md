@@ -6,7 +6,7 @@ You can see PSICQUIC in action with the [PSICQUIC View](http://www.ebi.ac.uk/Too
 
 PSICQUIC is an effort from the [HUPO Proteomics Standard Initiative](http://www.psidev.info/) \(HUPO-PSI\) to standardise the access to molecular interaction databases programmatically.
 
-![](/images/psicquic.png)
+![psicquic architecture](/images/psicquic.png)
 
 Basically, PSICQUIC specifies:
 
