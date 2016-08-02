@@ -11,5 +11,5 @@ All the Python examples in this page use the REST access as it is straight-forwa
 
 The following examples can be used to access PSICQUIC services.
 
-  * [Query one service](http://code.google.com/p/psicquic/source/browse/trunk/psicquic-webservice/src/example/python/read-single-psicquic.py).
-  * [Query all the services](http://code.google.com/p/psicquic/source/browse/trunk/psicquic-webservice/src/example/python/read-all-psicquic.py): It queries the registry to get all the services and then executes a query for one of them.
+  * [Query one service](https://github.com/PSICQUIC/psicquic-webservice/blob/master/src/example/python/read-single-psicquic.py).
+  * [Query all the services](https://github.com/PSICQUIC/psicquic-webservice/blob/master/src/example/python/read-all-psicquic.py): It queries the registry to get all the services and then executes a query for one of them.
