@@ -4,14 +4,14 @@ You can see PSICQUIC in action with the [PSICQUIC View](http://www.ebi.ac.uk/Too
 
 # What is PSICQUIC?
 
-PSICQUIC is an effort from the [HUPO Proteomics Standard Initiative](http://www.psidev.info/) \(HUPO-PSI\) to standardise the access to molecular interaction databases programmatically.
+PSICQUIC is an effort from the [HUPO Proteomics Standard Initiative](http://www.psidev.info/) (HUPO-PSI) to standardise the access to molecular interaction databases programmatically.
 
 ![psicquic architecture](/images/psicquic.png)
 
 Basically, PSICQUIC specifies:
 
 * A standard [web service](http://en.wikipedia.org/wiki/Web_service) with a well-defined list of methods, accessible using [SOAP](/PsicquicSpec_1_3_Soap.md) or [REST](/PsicquicSpec_1_3_Rest.md).
-* A common query language \([MIQL](/MiqlDefinition.md)\) 
+* A common query language ([MIQL](/MiqlDefinition.md)) 
 
 Many interaction databases are already implementing PSICQUIC. You can check the [Registry](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS) to see the most up to date list of providers and their status.
 
