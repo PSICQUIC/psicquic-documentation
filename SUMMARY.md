@@ -30,6 +30,8 @@
 -----
 * [Service providers](service-providers.md)
     * [How to install](HowToInstallPsicquicSolr.md)
+        * [How to install](HowToInstallPsicquicSolr.md)
+        * [How to install](HowToInstallPsicquicSolr.md)
     * [Data Distribution Best Practices](DataDistributionBestPractices.md)
     * [Data Enricher](DataEnricher.md)
     * [FAQ](Faq.md)
