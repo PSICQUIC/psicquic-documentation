@@ -1,5 +1,3 @@
-
-
 # Installation #
 
 This instructions are aimed to those who want to have its local instance of the PSICQUIC web service based on SOLR.
