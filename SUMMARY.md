@@ -28,10 +28,11 @@
         * [Java Examples](http://code.google.com/p/psimi/wiki/PsimiExamples)
 -----
 * [Service providers](service-providers.md)
-    * [How to install PSICQUIC Solr](HowToInstallPsicquicSolr.md)
+    * [How to install PSICQUIC Solr (recommened)](HowToInstallPsicquicSolr.md)
         * [Single jetty server](HowToInstallPsicquicAndSolrJetty.md)
         * [Using a solr server independent from the PSICQUIC server](HowToInstallPsicquicSolrDifferentServers.md)
-    * [How to install PSICQUIC using LUCENE ](HowToInstall.md)
+    * [How to install PSICQUIC using LUCENE ](HowToInstallPsicquicLucene.md)
+        * [Using LUCENE](HowtoInstall.md)
     * [Data Distribution Best Practices](DataDistributionBestPractices.md)
     * [Data Enricher](DataEnricher.md)
     * [FAQ](Faq.md)

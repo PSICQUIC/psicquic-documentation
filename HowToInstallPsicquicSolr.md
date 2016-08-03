@@ -12,10 +12,4 @@ You have two ways for building your psicquic webservice :
     * If you want to start the solr server in another server so you can reuse it in other applications independent from your PSICQUIC service
     * If you already have a solr server independent from the PSICQUIC server
 
-## PSICQUIC reference implementation based on LUCENE ##
 
-This is the original psicquic reference implementation which is able to index a MITAB 2.5 file and which is based on LUCENE. This implementation will not be further developed and the PSICQUIC reference implementation based on SOLR should be used instead.
-
-
-
-You can find more information about how to install PSICQUIC using LUCENE [here](HowToInstall.md).
