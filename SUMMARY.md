@@ -30,7 +30,7 @@
 -----
 * [Service providers](service-providers.md)
     * [How to install](HowToInstallPsicquicSolr.md)
-        * [How to install](HowToInstallPsicquicSolr.md)
+        * [How to install PSICQUIC using a single jetty server](HowToInstallPsicquicAndSolrJetty.md)
         * [How to install](HowToInstallPsicquicSolr.md)
     * [Data Distribution Best Practices](DataDistributionBestPractices.md)
     * [Data Enricher](DataEnricher.md)
