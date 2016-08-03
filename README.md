@@ -19,15 +19,15 @@ If you are a user in need of a convenient and standard way to fetch molecular in
 
 # Information for Users
 
-PSICQUIC is a web service so it is meant to be use in machine-to-machine communications. However, you can get PSI-MITAB data directly in your browser by using the [REST Access](/RestAccess.md), like in [this example](http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/brca2).
+PSICQUIC is a web service so it is meant to be use in machine-to-machine communications. However, you can get PSI-MITAB data directly in your browser by using the [REST Access](RestAccess.md), like in [this example](http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/brca2).
 
-* How to retrieve molecular interactions: using [SOAP](/PsicquicSpec_1_3_Soap.md) or [REST](/PsicquicSpec_1_3_Rest.md)
+* How to retrieve molecular interactions: using [SOAP](PsicquicSpec_1_3_Soap.md) or [REST](PsicquicSpec_1_3_Rest.md)
 * [List of PSICQUIC Service Providers](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS).
 * There are two available JAVA clients for PSICQUIC. If you are a JAVA programmer start using PSICQUIC right away, find the documentations about the clients [here](/JavaClient.md).
-* A Bioconductor package has also been developped for PSICQUIC. You can find more documentation [here](http://www.bioconductor.org/packages/release/bioc/html/PSICQUIC.html).
+* A Bioconductor package has also been developed for PSICQUIC. You can find more documentation [here](http://www.bioconductor.org/packages/release/bioc/html/PSICQUIC.html).
 * You can find more examples, including samples in [Java](/ClientCodeSample.md), [Perl](/PerlCodeSamples.md) or [Python](./PythonCodeSamples.md).
-* [The MIQL \(Molecular Interaction Query Language\) reference](/MiqlDefinition.md) that can be used to perform more complex queries. 
-* If you want to see a real use case of PSICQUIC, check the [PSICQUIC View application](http://www.ebi.ac.uk/Tools/webservices/psicquic/view/) \(then just click on Search\). It uses PSICQUIC behind the scenes.
+* [The MIQL (Molecular Interaction Query Language) reference](MiqlDefinition.md) that can be used to perform more complex queries. 
+* If you want to see a real use case of PSICQUIC, check the [PSICQUIC View application](http://www.ebi.ac.uk/Tools/webservices/psicquic/view/) (then just click on Search). It uses PSICQUIC behind the scenes.
 * You can also find the different PSICQUIC services in [BioCatalogue](http://www.biocatalogue.org/tags/psicquic).
 * You can use PSICQUIC directly from the latest and greatest Cytoscape. Check[this page](/CytoscapeClient.md) if you want to know how.
 * [Other projects](/WhoUsesPsicquic.md) are using PSICQUIC too.
@@ -35,7 +35,7 @@ PSICQUIC is a web service so it is meant to be use in machine-to-machine communi
 
 # Information for Molecular Interaction providers
 
-Implementing PSICQUIC is relatively simple. If you can generate a PSI-MITAB file \(versions 2.5, 2.6 or 2.7\), you can start using the Reference Implementation of PSICQUIC right away. For instructions, check these links:
+Implementing PSICQUIC is relatively simple. If you can generate a PSI-MITAB file (versions 2.5, 2.6 or 2.7), you can start using the Reference Implementation of PSICQUIC right away. For instructions, check these links:
 
 * [How to install the PSICQUIC Reference Implementation](/HowToInstallPsicquicSolr.md): step by step guide for molecular interaction providers. 
 
@@ -43,7 +43,7 @@ Implementing PSICQUIC is relatively simple. If you can generate a PSI-MITAB file
 
 To cite PSICQUIC please use:
 
-Aranda, B. et al. PSICQUIC and PSISCORE: accessing and scoring molecular interactions. Nat Meth 8, 528-529 \(2011\).
+Aranda, B. et al. PSICQUIC and PSISCORE: accessing and scoring molecular interactions. Nat Meth 8, 528-529 (2011).
 
-doi:10.1038\/nmeth.1637 [http:\/\/www.nature.com\/nmeth\/journal\/v8\/n7\/full\/nmeth.1637.html](http://www.nature.com/nmeth/journal/v8/n7/full/nmeth.1637.html)
+doi:10.1038/nmeth.1637 [http://www.nature.com/nmeth/journal/v8/n7/full/nmeth.1637.html](http://www.nature.com/nmeth/journal/v8/n7/full/nmeth.1637.html)
 
