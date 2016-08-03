@@ -14,24 +14,29 @@ This instructions are aimed to those who want to have its local instance of the 
 
 ## Obtaining the solr schema used in the reference implementation ##
 
-  * clone the code :
+Clone the code :
+
 `git clone --branch psicquic-solr-1.2.4 https://github.com/PSICQUIC/psicquic-solr.git psicquic-solr-1.2.4`
-  * copy solr-home directory (psicquic-solr/src/main/resources/solr-home/) in your solr working directory :
+
+Copy solr-home directory (psicquic-solr/src/main/resources/solr-home/) in your solr working directory :
+
 `cp -r psicquic-solr/src/main/resources/solr-home/ path/to/your/solr-workingdir`
 
 ## Starting solr server ##
 
-  * the solr.war file is available in (psicquic-solr/src/main/resources/solr.war or you can download the solr 3.6.2 package from apache website http://archive.apache.org/dist/lucene/solr/3.6.2/
-  * In the environment of your solr server, it is important to set the variable solr.solr.home which will point to the solr-home folder that you copied in your system.
-  * More information about how to install solr is available here http://wiki.apache.org/solr/SolrInstall
+The solr.war file is available in (psicquic-solr/src/main/resources/solr.war or you can download the solr 3.6.2 package from apache website http://archive.apache.org/dist/lucene/solr/3.6.2/
+
+In the environment of your solr server, it is important to set the variable solr.solr.home which will point to the solr-home folder that you copied in your system. More information about how to install solr is available here http://wiki.apache.org/solr/SolrInstall
 
 # Obtaining the Reference Implementation source code #
 
 There are two ways to obtain the source code:
 
   * From the download section, downloading psicquic-solr-ws-1.3.13.zip https://github.com/PSICQUIC/psicquic-solr-ws/releases/tag/psicquic-solr-ws-1.3.13
-  * Using a git client, clone the code :
-`git clone --branch psicquic-solr-ws-1.3.13 https://github.com/PSICQUIC/psicquic-solr-ws.git psicquic-solr-ws-1.3.13`
+
+  * Using a git client, clone the code
+
+    `git clone --branch psicquic-solr-ws-1.3.13 https://github.com/PSICQUIC/psicquic-solr-ws.git psicquic-solr-ws-1.3.13`
 
 # Building the index #
 
