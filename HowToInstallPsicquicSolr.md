@@ -1,9 +1,3 @@
-## PSICQUIC reference implementation based on LUCENE ##
-
-This is the original psicquic reference implementation which is able to index a MITAB 2.5 file and which is based on LUCENE. This implementation will not be further developed and the PSICQUIC reference implementation based on SOLR should be used instead.
-
-You can find more information about how to install PSICQUIC using LUCENE [here](HowToInstall.md).
-
 ## PSICQUIC reference implementation based on SOLR (recommended) ##
 
 The new PSICQUIC Reference Implementation is now based on SOLR which is an indexing software based on LUCENE. It can index MITAB 2.5, 2.6 and 2.7 files.
@@ -17,3 +11,11 @@ You have two ways for building your psicquic webservice :
     * If you don't want to use jetty for running your PSICQUIC webservice
     * If you want to start the solr server in another server so you can reuse it in other applications independent from your PSICQUIC service
     * If you already have a solr server independent from the PSICQUIC server
+
+## PSICQUIC reference implementation based on LUCENE ##
+
+This is the original psicquic reference implementation which is able to index a MITAB 2.5 file and which is based on LUCENE. This implementation will not be further developed and the PSICQUIC reference implementation based on SOLR should be used instead.
+
+
+
+You can find more information about how to install PSICQUIC using LUCENE [here](HowToInstall.md).

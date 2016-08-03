@@ -26,12 +26,11 @@
         * [MIF254.xsd](http://psidev.cvs.sourceforge.net/viewvc/psidev/psi/mi/rel25/src/MIF254.xsd)
         * [XML Specifications](http://code.google.com/p/psimi/wiki/PsimiXMLSpecifications)
         * [Java Examples](http://code.google.com/p/psimi/wiki/PsimiExamples)
-
 -----
 * [Service providers](service-providers.md)
     * [How to install](HowToInstallPsicquicSolr.md)
         * [How to install PSICQUIC using a single jetty server](HowToInstallPsicquicAndSolrJetty.md)
-        * [How to install](HowToInstallPsicquicSolr.md)
+        * [How to install PSICQUIC using a solr server independent from the PSICQUIC server](HowToInstallPsicquicSolrDifferentServers.md)
         * [How to install PSICQUIC using LUCENE ](HowToInstall.md)
     * [Data Distribution Best Practices](DataDistributionBestPractices.md)
     * [Data Enricher](DataEnricher.md)
