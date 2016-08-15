@@ -55,8 +55,9 @@ bash indexMitabWithSolrUrl.sh /path/to/mitab-file solr-server-url
     where
     * **/path/to/mitab-file** is the path to the MITAB file to index. This argument is mandatory.
     * **solr-server-url** is the URL of your solr server. By default if not provided, it is [http://localhost:9090/solr/](http://localhost:9090/solr/).
+    * 
 
-* The indexing can be executed using the Maven command (used by the bash script) :
+* The indexing can be executed using the Maven command (used by the bash script):
 
     ```
 cd psicquic-solr-ws
