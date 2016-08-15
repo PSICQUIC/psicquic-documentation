@@ -8,13 +8,12 @@ This instructions are aimed to those who want to have its local instance of the 
   * [Maven 2](http://maven.apache.org)
 
 ## Obtaining the Reference Implementation source code ##
+There are two ways to obtain the source code:
 
-  * Download the [psicquic-ws-1.2.6.zip archive](https://drive.google.com/?authuser=0#folders/0B7OyIcK25EtrWVFRTkVSYmllR3c) containing the sources.
-  * Using a [Subversion](http://subversion.tigris.org) client, check out the code :
+* From the download section, downloading [psicquic-ws-1.2.7 (.zip/.tar.gz)](https://github.com/PSICQUIC/psicquic-webservice/releases/tag/psicquic-ws-1.2.7) containing the sources
+* Using a git client, clone the code
 
-```
-svn co http://psicquic.googlecode.com/svn/tags/psicquic-ws-1.2.7 psicquic-ws-1.2.7
-```
+  `git clone --branch psicquic-ws-1.2.7 https://github.com/PSICQUIC/psicquic-webservice.git psicquic-ws-1.2.7`
 
 # Creating an index #
 
@@ -25,7 +24,6 @@ This class can be executed using Maven:
 
 ```
 cd psicquic-webservice
-
 mvn clean compile -P createIndex -D psicquic.index=/path/to/new.index -D mitabFile=/path/to/mitab.txt -D hasHeader=true
 ```
 
