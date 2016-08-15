@@ -11,9 +11,11 @@ This instructions are aimed to those who want to have its local instance of the 
 
 There are two ways to obtain the source code:
 
-  * From the download section, downloading psicquic-solr-ws-1.3.13.zip https://drive.google.com/?authuser=0#folders/0B7OyIcK25EtrWVFRTkVSYmllR3c
-  * Using a [Subversion](http://subversion.tigris.org) client, check out the code :
-`svn co http://psicquic.googlecode.com/svn/tags/psicquic-solr-ws-1.3.13`
+* From the download section, downloading psicquic-solr-ws-1.3.13.zip [https://github.com/PSICQUIC/psicquic-solr-ws/releases/tag/psicquic-solr-ws-1.3.13](https://github.com/PSICQUIC/psicquic-solr-ws/releases/tag/psicquic-solr-ws-1.3.13)
+
+* Using a git client, clone the code
+
+  `git clone --branch psicquic-solr-ws-1.3.13 https://github.com/PSICQUIC/psicquic-solr-ws.git psicquic-solr-ws-1.3.13`
 
 # Creating a solr working directory #
 
@@ -44,7 +46,6 @@ where
 
 ```
 cd psicquic-solr-ws
-
 mvn clean install -PcreateIndex -DmitabFile=/path/to/mitab-file -Dsolr.workdir=/path/to/solr-workingdir -Dmaven.test.skip
 ```
 
@@ -77,7 +78,6 @@ where
 
 ```
 cd psicquic-solr-ws
-
 mvn install -PrestartIndex -DmitabFile=/path/to/mitab-file -Dsolr.workdir=/path/to/solr-workingdir -Dindexing.id=job-ID -Dmaven.test.skip
 ```
 
@@ -109,7 +109,6 @@ where
 
 ```
 cd psicquic-solr-ws
-
 mvn clean -Pstart-jetty-solr jetty:run -Dmaven.test.skip -Dsolr.workdir=/path/to/solr-workingdir
 ```
 
