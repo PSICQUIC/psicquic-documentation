@@ -33,5 +33,5 @@ The following table shows the available standard fields that can be used in PSIC
 | species | Species. Tax ID A and Tax ID B | 10, 11| `species:human` |
 | type	| Interaction type(s) | 12 | `type:"physical association"` |
 | detmethod | Interaction Detection method(s) | 7 | `detmethod:"two hybrid*"` |
-| source | Interaction source(s) | 13 | `psi-mi:"MI:0469"(intact) |
+| source | Interaction source(s) | 13 | `psi-mi:"MI:0469"(intact)` |
 | interaction\_id | Interaction identifier(s) | 14 | `interaction_id:EBI-761050` |
