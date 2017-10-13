@@ -11,7 +11,9 @@ The MIQL syntax is based on [Lucene's syntax](http://lucene.apache.org/java/3_0_
   * **Fields**: used to search in a specific column. See the next section for the specific field names. E.g. <font color='#006600'> <b><code>species:human</code></b></font>
   * **Term modifiers**: wildcard searches, fuzzy searches, proximity and range searches. E.g. <font color='#006600'><b><code>brc*</code></b></font>
   * **Operands**: _OR_ (or space), _AND_, _NOT_, +, -. E.g. <font color='#006600'><b><code>brca2 AND rpa1</code></b></font>  or  <font color='#006600'><b><code>brca2 NOT mouse</code></b></font> or <font color='#006600'><b><code>+brca2 –mouse –expansion:spoke</code></b></font>
-  * **Grouping and field grouping**: <font color='#006600'><b><code>brca2 AND (mouse "in vitro")</code></b></font>
+  * **Grouping and field grouping**: <font color='#006600'><b><code>brca2 AND ( mouse "in vitro" )</code></b></font>
+
+**IMPORTANT**: When using parenthesis in your queries, please add a space after and opening parenthesis and before a closing one, since some PSICQUIC implementations need it for correct parenthesis recognition.
 
 # Existing versions #
 
