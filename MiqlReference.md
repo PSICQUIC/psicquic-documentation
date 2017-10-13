@@ -11,8 +11,9 @@ The MIQL syntax is based on [Lucene's syntax](http://lucene.apache.org/java/3_0_
   * **Fields**: used to search in a specific column. See the next section for the specific field names. E.g. <font color='#006600'> <b><code>species:human</code></b></font>
   * **Term modifiers**: wildcard searches, fuzzy searches, proximity and range searches. E.g. <font color='#006600'><b><code>brc*</code></b></font>
   * **Operands**: _OR_ (or space), _AND_, _NOT_, +, -. E.g. <font color='#006600'><b><code>brca2 AND rpa1</code></b></font>  or  <font color='#006600'><b><code>brca2 NOT mouse</code></b></font> or <font color='#006600'><b><code>+brca2 –mouse </code></b></font>
-  * **Grouping and field grouping**: <font color='#006600'><b><code>brca2 AND (mouse "in vitro")</code></b></font>
+  * **Grouping and field grouping**: <font color='#006600'><b><code>brca2 AND ( mouse "in vitro" )</code></b></font>
 
+**IMPORTANT**: When using parenthesis in your queries, please add a space after and opening parenthesis and before a closing one, since some PSICQUIC implementations need it for correct parenthesis recognition.
 
 # Fields #
 
@@ -23,10 +24,10 @@ The following table shows the available standard fields that can be used in PSIC
 | idA | Identifier A | 1 | `idA:P74565` |
 | idB | Identifier B | 2 |`idB:P74565` |
 | id | Identifiers (A or B) | 1..4 | `id:P74565` |
-| alias | Aliases (A or B) | 5, 6 | `alias:(KHDRBS1 OR HCK)` |
+| alias | Aliases (A or B) | 5, 6 | `alias:( KHDRBS1 OR HCK )` |
 | identifier | Identifiers (A or B) or Aliases (A or B) | 1..6 | `identifier:P74565` |
 | pubauth | Publication 1st author(s) | 8 | `pubauth:scott` |
-| pubid | Publication Identifier(s)  | 9 | `pubid:(10837477 OR 12029088)` |
+| pubid | Publication Identifier(s)  | 9 | `pubid:( 10837477 OR 12029088 )` |
 | taxidA | Tax ID interactor A: be it the tax ID or the species name | 10 | `taxidA:mouse` |
 | taxidB | Tax ID interactor B: be it the tax ID or species name | 11 | `taxidB:9606` |
 | species | Species. Tax ID A and Tax ID B | 10, 11| `species:human` |
