@@ -38,7 +38,7 @@ In addition, it is possible to add the existing Java libraries to create an obje
         <dependency>
             <groupId>psidev.psi.mi</groupId>
             <artifactId>psimitab</artifactId>
-            <version>1.8.4</version>
+            <version>1.8.5</version>
             <scope>test</scope>
         </dependency>
          <dependency>
