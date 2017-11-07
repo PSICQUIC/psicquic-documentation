@@ -66,7 +66,7 @@ This goes in the dependencies section of your POM file wit other dependencies yo
         <dependency>
             <groupId>org.hupo.psi.mi.psicquic</groupId>
             <artifactId>psicquic-client</artifactId>
-            <version>1.5.3</version>
+            <version>1.5.4</version>
         </dependency>
 ```
 
