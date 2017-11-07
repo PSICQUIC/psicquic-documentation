@@ -14,7 +14,7 @@ This instructions are aimed to those who want to have its local instance of the 
 
 * Clone the code :
 
-    `git clone --branch psicquic-solr-1.2.4 https://github.com/PSICQUIC/psicquic-solr.git psicquic-solr-1.2.4`
+    `git clone --branch psicquic-solr-1.2.6 https://github.com/PSICQUIC/psicquic-solr.git psicquic-solr-1.2.6`
 
 * Copy solr-home directory (psicquic-solr/src/main/resources/solr-home/) in your solr working directory :
 
@@ -30,11 +30,11 @@ In the environment of your solr server, it is important to set the variable solr
 
 There are two ways to obtain the source code:
 
-* From the download section, downloading psicquic-solr-ws-1.3.13.zip [https://github.com/PSICQUIC/psicquic-solr-ws/releases/tag/psicquic-solr-ws-1.3.13](https://github.com/PSICQUIC/psicquic-solr-ws/releases/tag/psicquic-solr-ws-1.3.13)
+* From the download section, downloading psicquic-solr-ws-1.3.14.zip [https://github.com/PSICQUIC/psicquic-solr-ws/releases/tag/psicquic-solr-ws-1.3.14](https://github.com/PSICQUIC/psicquic-solr-ws/releases/tag/psicquic-solr-ws-1.3.14)
 
 * Using a git client, clone the code
 
-  `git clone --branch psicquic-solr-ws-1.3.13 https://github.com/PSICQUIC/psicquic-solr-ws.git psicquic-solr-ws-1.3.13`
+  `git clone --branch psicquic-solr-ws-1.3.14 https://github.com/PSICQUIC/psicquic-solr-ws.git psicquic-solr-ws-1.3.14`
 
 
 # Building the index
