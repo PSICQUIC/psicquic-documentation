@@ -11,7 +11,7 @@ You can download the client and its dependencies in the [Downloads section](http
 <dependency>
    <groupId>org.hupo.psi.mi.psicquic</groupId>
    <artifactId>psicquic-registry-client</artifactId>
-   <version>1.1.0</version>
+   <version>1.1.1</version>
 </dependency>
 ```
 
@@ -20,7 +20,7 @@ You can download the client and its dependencies in the [Downloads section](http
 <dependency>
    <groupId>org.hupo.psi.mi.psicquic</groupId>
    <artifactId>psicquic-registry-client</artifactId>
-   <version>1.1.1-SNAPSHOT</version>
+   <version>1.1.2-SNAPSHOT</version>
 </dependency>
 ```
 

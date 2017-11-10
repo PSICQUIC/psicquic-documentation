@@ -10,10 +10,10 @@ This instructions are aimed to those who want to have its local instance of the 
 ## Obtaining the Reference Implementation source code ##
 There are two ways to obtain the source code:
 
-* From the download section, downloading [psicquic-ws-1.2.7 (.zip/.tar.gz)](https://github.com/PSICQUIC/psicquic-webservice/releases/tag/psicquic-ws-1.2.7) containing the sources
+* From the download section, downloading [psicquic-ws-1.2.8 (.zip/.tar.gz)](https://github.com/PSICQUIC/psicquic-webservice/releases/tag/psicquic-ws-1.2.8) containing the sources
 * Using a git client, clone the code
 
-  `git clone --branch psicquic-ws-1.2.7 https://github.com/PSICQUIC/psicquic-webservice.git psicquic-ws-1.2.7`
+  `git clone --branch psicquic-ws-1.2.7 https://github.com/PSICQUIC/psicquic-webservice.git psicquic-ws-1.2.8`
 
 # Creating an index #
 

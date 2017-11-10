@@ -33,7 +33,7 @@ If you are using Maven, include the following in your project:
       <dependency>
           <groupId>org.hupo.psi.mi.psicquic</groupId>
           <artifactId>psicquic-simple-client</artifactId>
-          <version>1.3.3</version>
+          <version>1.3.4</version>
       </dependency>
 ```
 
@@ -43,7 +43,7 @@ If you are using Maven, include the following in your project:
       <dependency>
           <groupId>org.hupo.psi.mi.psicquic</groupId>
           <artifactId>psicquic-simple-client</artifactId>
-          <version>1.3.4-SNAPSHOT</version>
+          <version>1.3.5-SNAPSHOT</version>
       </dependency>
 ```
 

@@ -22,7 +22,7 @@ This goes in the dependencies section of your POM file wit other dependencies yo
         <dependency>
             <groupId>org.hupo.psi.mi.psicquic</groupId>
             <artifactId>psicquic-simple-client</artifactId>
-            <version>1.3.3</version>
+            <version>1.3.4</version>
         </dependency>
 ```
 
