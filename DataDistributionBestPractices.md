@@ -97,7 +97,7 @@ The [InChI Trust](http://www.inchi-trust.org/?q=node/3) has more information and
 | Alternative identifier | use other cross references to other nucleotide sequence databases such as Refseq nucleotides  |  |
 | Alias |  |  |
 | Interactor Xrefs |  |  |
-| NCBI Taxonomy identifier | The taxid of the molecule (e.g. taxid:9606) should be provided when available. In parenthesis, it is recommended to add the common name/scientific name of the organism. It should be '-' if undefined, taxid:-3(unknown) or taxid:-2(chemical synthesis) otherwise. |
+| NCBI Taxonomy identifier | The taxid of the molecule (e.g. taxid:9606) should be provided when available. In parenthesis, it is recommended to add the common name/scientific name of the organism. It should be '-' if undefined, taxid:-3(unknown) or taxid:-2(chemical synthesis) otherwise. ||
 | Interactor checksums (columns 33 and 34) |  |  |
 
 #### 5. Gene ####
@@ -189,7 +189,7 @@ Features of participant A and B can be added in columns 37 and 39 of MITAB 2.7.
 
 | **Column** | **Data format** | **Example(s)** |
 |:-----------|:----------------|:---------------|
-| Features for interactor A and B | describe features or participant A such as binding sites, PTMs, tags, etc. Represented as feature\_type:range(text), where feature\_type is the feature type as described in the PSI-MI controlled vocabulary. For the PTMs, the MI ontology terms are obsolete and the PSI-MOD ontology should be used instead. The text can be used for feature type names, feature names, interpro cross references, etc. The use of the following characters is allowed to describe a range position : ‘?’ (undetermined position), ‘n’ (n terminal range), ‘c’ (c-terminal range), ‘>x’ (greater than x), ‘<’ (less than x), ‘x1..x1’ (fuzzy range position Ex : 5..5-9..10). The character '-' is used to separate start position(s) from end position(s). Multiple features separated by "\|". Multiple ranges per feature separated by ','. However, It is not possible to represent linked features/ranges | `sufficient to bind:27-195,201-133 (IPR000785)` <br /> `gst tag:n-n(n-terminal region)\|sufficient to bind:23-45` <br /> `binding site:23..24-46,33-33` |
+| Features for interactor A and B | describe features or participant A such as binding sites, PTMs, tags, etc. Represented as feature\_type:range(text), where feature\_type is the feature type as described in the PSI-MI controlled vocabulary. For the PTMs, the MI ontology terms are obsolete and the PSI-MOD ontology should be used instead. The text can be used for feature type names, feature names, interpro cross references, etc. The use of the following characters is allowed to describe a range position : ‘?’ (undetermined position), ‘n’ (n terminal range), ‘c’ (c-terminal range), ‘>x’ (greater than x), ‘<’ (less than x), ‘x1..x1’ (fuzzy range position Ex : 5..5-9..10). The character '-' is used to separate start position(s) from end position(s). Multiple features separated by "&#124;". Multiple ranges per feature separated by ','. However, It is not possible to represent linked features/ranges | `sufficient to bind:27-195,201-133 (IPR000785)` <br /> `gst tag:n-n(n-terminal region)\|sufficient to bind:23-45` <br /> `binding site:23..24-46,33-33` |
 
 ### J. Interaction confidence nomenclature ###
 
