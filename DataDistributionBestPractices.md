@@ -13,12 +13,12 @@ Typically, an interacting molecule is described using up to 12 columns of the [M
 
 | **Column name** | **Columns for Interactor A** | **Columns for Interactor B** | **Definition** |
 |:----------------|:-----------------------------|:-----------------------------|:---------------|
-| Unique identifier | 1 | 2 | represented as databaseName:ac, where databaseName is the name of the corresponding database as defined in the [PSI-MI controlled vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI:0444&termName=database%20citation), and ac is the unique primary identifier of the molecule in the database. Even though the MITAB format can accept several identifiers from multiple databases (separated by "|") in the 'unique identifier' columns, it is recommended to give only one identifier. It is also recommended that proteins are identified by stable identifiers such as their UniProtKB, RefSeq, Ensembl, ddbj/genbank/embl or Chebi accession number.|
-| Alternative Identifier | 3 | 4 | represented as databaseName:ac, where databaseName is the name of the corresponding database as defined in the [PSI-MI controlled vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI:0444&termName=database%20citation), and ac is the primary identifier of the molecule in the database. Multiple identifiers separated by "|". It is recommended that only database identifiers for the interactors are given in these columns. Other cross references for these interactors such as GO xrefs should be moved to columns 23 and 24 and interactor names such as gene names should be moved to columns 5 and 6. |
-| Aliases | 5 | 6 | represented as databaseName:name, where databaseName is the name of the corresponding database as defined in the [PSI-MI controlled vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI:0444&termName=database%20citation), and name is the name of the molecule in the database (Ex gene names, protein recommended name, ORF, locus name, drug name, Chebi recommended name, etc.). Multiple names separated by "|".  |
-| Xrefs | 23 | 24 | represented as databaseName:ac, where databaseName is the name of the corresponding database as defined in the [PSI-MI controlled vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI:0444&termName=database%20citation), and ac is the primary accession in the database. Multiple accessions separated by "|". This columns can contain for instance GO xrefs. |
-| NCBI Taxonomy identifier | 10 | 11 | Database name for NCBI taxid taken from the [PSI-MI controlled vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI:0444&termName=database%20citation), represented as taxid:identifier(organism common name). Even though the MITAB format can accept several taxon ids per column (Multiple identifiers separated by "|"), it is strongly recommended to have only one organism per protein per MITAB line. Currently no taxonomy identifiers other than NCBI taxid are anticipated, apart from the use of -2 to indicate "chemical synthesis" and -3 indicates "unknown". |
-| checksum | 33 | 34 | represented as methodName:value, where methodName is the name of the corresponding checksum method, and value is the checksum for this interactor. Multiple checksums separated by "|". This columns can contain for instance rogid, or standard inchi key |
+| Unique identifier | 1 | 2 | represented as **databaseName:ac**, where databaseName is the name of the corresponding database as defined in the [PSI-MI controlled vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI:0444&termName=database%20citation), and ac is the unique primary identifier of the molecule in the database. Even though the MITAB format can accept several identifiers from multiple databases (separated by "\|") in the 'unique identifier' columns, it is recommended to give only one identifier. It is also recommended that proteins are identified by stable identifiers such as their UniProtKB, RefSeq, Ensembl, ddbj/genbank/embl or Chebi accession number.|
+| Alternative Identifier | 3 | 4 | represented as **databaseName:ac**, where databaseName is the name of the corresponding database as defined in the [PSI-MI controlled vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI:0444&termName=database%20citation), and ac is the primary identifier of the molecule in the database. Multiple identifiers separated by "\|". It is recommended that only database identifiers for the interactors are given in these columns. Other cross references for these interactors such as GO xrefs should be moved to columns 23 and 24 and interactor names such as gene names should be moved to columns 5 and 6. |
+| Aliases | 5 | 6 | represented as databaseName:name, where databaseName is the name of the corresponding database as defined in the [PSI-MI controlled vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI:0444&termName=database%20citation), and name is the name of the molecule in the database (Ex gene names, protein recommended name, ORF, locus name, drug name, Chebi recommended name, etc.). Multiple names separated by "\|".  |
+| Xrefs | 23 | 24 | represented as **databaseName:ac**, where databaseName is the name of the corresponding database as defined in the [PSI-MI controlled vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI:0444&termName=database%20citation), and ac is the primary accession in the database. Multiple accessions separated by "\|". This columns can contain for instance GO xrefs. |
+| NCBI Taxonomy identifier | 10 | 11 | Database name for NCBI taxid taken from the [PSI-MI controlled vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI:0444&termName=database%20citation), represented as **taxid:identifier(organism common name)**. Even though the MITAB format can accept several taxon ids per column (Multiple identifiers separated by "\|"), it is strongly recommended to have only one organism per protein per MITAB line. Currently no taxonomy identifiers other than NCBI taxid are anticipated, apart from the use of -2 to indicate "chemical synthesis" and -3 indicates "unknown". |
+| checksum | 33 | 34 | represented as **methodName:value**, where methodName is the name of the corresponding checksum method, and value is the checksum for this interactor. Multiple checksums separated by "\|". This columns can contain for instance rogid, or standard inchi key |
 
 <br />
 
@@ -55,11 +55,8 @@ In case of complexes (several protein chains for instance), no reference databas
 | Alternative identifier |  Use **secondary cross references** in primary database, <br /> Use model organism databases. | `uniprotkb:O00183` |
 | Interactor Xrefs |  Use cross references to databases that can give more information about the protein but cannot be used as identifier. This columns can also contain secondary identifiers that are ambiguous (can be shared by two different proteins for instance, uniprot demerge) and that cannot be used to identify a single protein. | `go:"GO:0003824"` |
 | Alias | use the gene name found in your reference database. 'orf name', 'gene name synonym', 'locus names' and 'protein recommended name' can also be added | `uniprotkb:BRCA2(gene name)` <br />`uniprotkb:FACD(gene name synonym)` |
-| NCBI Taxonomy identifier | The taxid of the molecule (e.g. taxid:9606) should always be provided. In parenthesis, it is recommended to add the common name/scientific name of the organism. | `taxid:9606`<br />`taxid:9606(human)|taxid:9606(Homo sapiens)` |
+| NCBI Taxonomy identifier | The taxid of the molecule (e.g. taxid:9606) should always be provided. In parenthesis, it is recommended to add the common name/scientific name of the organism. | `taxid:9606`<br /> `taxid:9606(human)`  <br /> `taxid:9606(Homo sapiens)` |
 | Interactor checksums (columns 33 and 34) |  Use **rogid** and **crogid** | `rogid:UcdngwpTSS6hG/pvQGgpp40u67I9606` <br /> `crogid:UcdngwpTSS6hG/pvQGgpp40u67I9606` |
-
-
-MITAB27 format definition: http://code.google.com/p/psicquic/wiki/MITAB27Format
 
 **What is a ROGID ?**
 
@@ -121,7 +118,7 @@ Currently, the publication can be described using up to 2 columns in MITAB. The 
 
 | **Column** | **Data required** | **Example(s)** |
 |:-----------|:------------------|:---------------|
-| identifier of the publication (col 8) | use **a unique** cross references to pubmed or doi. If an IMEx id has been assigned to the publication, it should be added as well. If no pubmed id or DOI number can be used, another publication identifier could be used | `pubmed:10655498`<br />`pubmed:16980971|imex:IM-1`|
+| identifier of the publication (col 8) | use **a unique** cross references to pubmed or doi. If an IMEx id has been assigned to the publication, it should be added as well. If no pubmed id or DOI number can be used, another publication identifier could be used | `pubmed:10655498`\|`pubmed:16980971`\|`imex:IM-1`|
 | First Author | use the first author surname in the publication and the publication date in parenthesis | Ciferri et al.(2005) |
 
 ### C. Describing the organism ###
@@ -131,7 +128,7 @@ In MITAB 2.7, three columns can describe organisms.
 | **Column** | **Data required** | **Example(s)** |
 |:-----------|:------------------|:---------------|
 | NCBI Taxonomy identifier for interactor A (col 10 and 11) | use **a unique** taxId and in parenthesis gives the common name and/or scientific name. This information should always be provided for genes and proteins. For nucleic acids and small molecules, the column can be empty if the information is not relevant, -2 to indicate "chemical synthesis" and -3 to indicate "unknown"  | `taxid:9606(human)`<br />`taxid:9606(human)|taxid:9606(Homo sapiens)`|
-| NCBI Taxonomy identifier for the host organism | use the taxId of the host organism only. -3 for unknown, -2 for chemical synthesis, -4 for in vivo and -5 for in sillico are allowed. In parenthesis, give the common name and/or scientific name of the organism. Cell types and tissues cannot be represented in this column. This information is recommended for MIMIx | `taxid:9606(human)`<br />`taxid:9606(human)|taxid:9606(Homo sapiens)` |
+| NCBI Taxonomy identifier for the host organism | use the taxId of the host organism only. -3 for unknown, -2 for chemical synthesis, -4 for in vivo and -5 for in sillico are allowed. In parenthesis, give the common name and/or scientific name of the organism. Cell types and tissues cannot be represented in this column. This information is recommended for MIMIx | `taxid:9606(human)`\|`taxid:9606(human)`\|`taxid:9606(Homo sapiens)` |
 
 ### D. Describing controlled vocabularies ###
 
@@ -145,7 +142,7 @@ In MITAB 2.7, 12 columns are controlled vocabulary columns :
 | **Column** | **Data format** | **Example(s)** |
 |:-----------|:----------------|:---------------|
 | columns 7, 12, 16, 17, 18, 19, 20, 21, 22, 41 and 42,   | use **a unique** cross references to the PSI-MI ontology. In parenthesis, it should be the name of the MI term in the ontology | `psi-mi:"MI:0914"(association)` |
-| column 13 | use one to several cross references to the PSI-MI ontology depending on the interaction which can be imported from other databases. | psi-mi:"MI:0469"(intact)|psi-mi:"MI:0923"(irefindex) |
+| column 13 | use one to several cross references to the PSI-MI ontology depending on the interaction which can be imported from other databases. | `psi-mi:"MI:0469"(intact)\|psi-mi:"MI:0923"(irefindex)` |
 
 ### E. Describing interaction and complex expansion ###
 
@@ -153,9 +150,10 @@ In MITAB 2.6 and MITAB 2.7, it is possible to tag n-ary interactions which have 
 
 However, this information is not enough to be able to re-build a complex from MITAB. The interaction AC column could be used to retrieve all the binary pairs composing the complex if the interaction AC is unique per interaction (true binary and n-ary interactions). If possible, the column 14 (Interaction identifiers) should always give an identifier for this purpose (could be the database accession of the interaction or an automatically generated identifier). This only concerns data providers which expand n-ary interactions. In case of true binary interactions, the column 14 is only used for linking to the proper database entry.
 
-_Ex :_<br /> psi-mi:"MI:1060"(spoke expansion)
-<br /> psi-mi:"MI:1061"(matrix expansion)
-<br /> psi-mi:"MI:1062"(bipartite expansion)
+_Ex :_
+`psi-mi:"MI:1060"(spoke expansion)`
+`psi-mi:"MI:1061"(matrix expansion)`
+`psi-mi:"MI:1062"(bipartite expansion)`
 
 
 Negative interactions can be represented in MITAB 2.6 and MITAB 2.6 but the negative column (column 36) should always be 'true'. The column can be left empty for positive interactions or should be 'false'.
