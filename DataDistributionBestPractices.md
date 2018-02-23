@@ -95,7 +95,7 @@ The [InChI Trust](http://www.inchi-trust.org/?q=node/3) has more information and
 |------------|-------------------|----------------|
 | Unique identifier | use a single cross references to **embl/genebank/ddbj**|`ddbj/embl/genbank:U41813` |
 | Alternative identifier | use other cross references to other nucleotide sequence databases such as Refseq nucleotides  |  |
-| NCBI Taxonomy identifier | The taxid of the molecule (e.g. taxid:9606) should be provided when available. In parenthesis, it is recommended to add the common name/scientific name of the organism. It should be '-' if undefined, taxid:-3(unknown) or taxid:-2(chemical synthesis) otherwise. ||
+| NCBI Taxonomy identifier | The taxid of the molecule (e.g. taxid:9606) should be provided when available. In parenthesis, it is recommended to add the common name/scientific name of the organism. It should be '-' if undefined, taxid:-3(unknown) or taxid:-2(chemical synthesis) otherwise. |.|
 
 
 #### 5. Gene ####
@@ -295,8 +295,8 @@ The recommendation is molecule type centric, the order column indicates the pick
 **Genes**
 
 | Order | Value | Level | Example(s) |
-|-------|-------|-------|------------|
+|:------|:------|:------|:-----------|
 | 1 | Gene symbol( gene name or synonyms ) ending with '_gene'_| Overview and/or Detailed | `psi-mi:LSM7_gene(display_short)` |
-| 2 | First identifier | Overview and/or Detailed ||
+| 2 | First identifier | Overview and/or Detailed |.|
 
 It was agreed that in order to differentiate proteins (primarily described by gene symbol) from genes in a network display, we will append to the gene symbol the molecule type.
