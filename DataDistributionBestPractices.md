@@ -295,7 +295,7 @@ The recommendation is molecule type centric, the order column indicates the pick
 **Genes**
 
 | Order | Value | Level | Example(s) |
-|:------|:------|:------|:-----------|
+|-------|-------|-------|------------|
 | 1 | Gene symbol( gene name or synonyms ) ending with '_gene'_| Overview and/or Detailed | `psi-mi:LSM7_gene(display_short)` |
 | 2 | First identifier | Overview and/or Detailed ||
 
