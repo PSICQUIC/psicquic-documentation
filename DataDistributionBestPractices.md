@@ -92,13 +92,11 @@ The [InChI Trust](http://www.inchi-trust.org/?q=node/3) has more information and
 #### 4. Nucleic Acids ####
 
 | **Column** | **Data required** | **Example(s)** |
-|:-----------|:------------------|:---------------|
+|------------|-------------------|----------------|
 | Unique identifier | use a single cross references to **embl/genebank/ddbj**|`ddbj/embl/genbank:U41813` |
 | Alternative identifier | use other cross references to other nucleotide sequence databases such as Refseq nucleotides  |  |
-| Alias |  |  |
-| Interactor Xrefs |  |  |
 | NCBI Taxonomy identifier | The taxid of the molecule (e.g. taxid:9606) should be provided when available. In parenthesis, it is recommended to add the common name/scientific name of the organism. It should be '-' if undefined, taxid:-3(unknown) or taxid:-2(chemical synthesis) otherwise. ||
-| Interactor checksums (columns 33 and 34) |  |  |
+
 
 #### 5. Gene ####
 
