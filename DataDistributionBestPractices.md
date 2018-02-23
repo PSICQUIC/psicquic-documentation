@@ -170,7 +170,7 @@ The section K gives more information about how to tag interactions.
 
 | **Column** | **Data format** | **Example(s)** |
 |:-----------|:----------------|:---------------|
-| Paramaters of the interaction (col 30) | represented as type:value(text) where type is a parameter type name from the PSI-MI ontology. Multiple values can be separated by "\|". Special characters should not be allowed in MITAB so to represent exponents, fractions or the real values could be used. | kd:"2.34x1/100000" |
+| Paramaters of the interaction (col 30) | represented as type:value(text) where type is a parameter type name from the PSI-MI ontology. Multiple values can be separated by "&#124;". Special characters should not be allowed in MITAB so to represent exponents, fractions or the real values could be used. | kd:"2.34x1/100000" |
 
 ### H. Describing stoichiometry and self interactions ###
 
@@ -299,6 +299,6 @@ The recommendation is molecule type centric, the order column indicates the pick
 | Order | Value | Level | Example(s) |
 |:------|:------|:------|:-----------|
 | 1 | Gene symbol( gene name or synonyms ) ending with '_gene'_| Overview and/or Detailed | `psi-mi:LSM7_gene(display_short)` |
-| 2 | First identifier | Overview and/or Detailed |  |
+| 2 | First identifier | Overview and/or Detailed ||
 
 It was agreed that in order to differentiate proteins (primarily described by gene symbol) from genes in a network display, we will append to the gene symbol the molecule type.
