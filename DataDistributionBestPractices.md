@@ -118,8 +118,8 @@ Currently, the publication can be described using up to 2 columns in MITAB. The 
 
 | **Column** | **Data required** | **Example(s)** |
 |:-----------|:------------------|:---------------|
-| identifier of the publication (col 8) | use **a unique** cross references to pubmed or doi. If an IMEx id has been assigned to the publication, it should be added as well. If no pubmed id or DOI number can be used, another publication identifier could be used | `pubmed:10655498`\|`pubmed:16980971`\|`imex:IM-1`|
-| First Author | use the first author surname in the publication and the publication date in parenthesis | Ciferri et al.(2005) |
+| identifier of the publication (col 8) | use **a unique** cross references to pubmed or doi. If an IMEx id has been assigned to the publication, it should be added as well. If no pubmed id or DOI number can be used, another publication identifier could be used | `pubmed:10655498`<br />`pubmed:16980971`<br />`imex:IM-1`|
+| First Author | use the first author surname in the publication and the publication date in parenthesis | `Ciferri et al.(2005)` |
 
 ### C. Describing the organism ###
 
@@ -127,8 +127,8 @@ In MITAB 2.7, three columns can describe organisms.
 
 | **Column** | **Data required** | **Example(s)** |
 |:-----------|:------------------|:---------------|
-| NCBI Taxonomy identifier for interactor A (col 10 and 11) | use **a unique** taxId and in parenthesis gives the common name and/or scientific name. This information should always be provided for genes and proteins. For nucleic acids and small molecules, the column can be empty if the information is not relevant, -2 to indicate "chemical synthesis" and -3 to indicate "unknown"  | `taxid:9606(human)`<br />`taxid:9606(human)|taxid:9606(Homo sapiens)`|
-| NCBI Taxonomy identifier for the host organism | use the taxId of the host organism only. -3 for unknown, -2 for chemical synthesis, -4 for in vivo and -5 for in sillico are allowed. In parenthesis, give the common name and/or scientific name of the organism. Cell types and tissues cannot be represented in this column. This information is recommended for MIMIx | `taxid:9606(human)`\|`taxid:9606(human)`\|`taxid:9606(Homo sapiens)` |
+| NCBI Taxonomy identifier for interactor A (col 10 and 11) | use **a unique** taxId and in parenthesis gives the common name and/or scientific name. This information should always be provided for genes and proteins. For nucleic acids and small molecules, the column can be empty if the information is not relevant, -2 to indicate "chemical synthesis" and -3 to indicate "unknown"  | `taxid:9606(human)`<br />`taxid:9606(human)`<br />`taxid:9606(Homo sapiens)`|
+| NCBI Taxonomy identifier for the host organism | use the taxId of the host organism only. -3 for unknown, -2 for chemical synthesis, -4 for in vivo and -5 for in sillico are allowed. In parenthesis, give the common name and/or scientific name of the organism. Cell types and tissues cannot be represented in this column. This information is recommended for MIMIx | `taxid:9606(human)`<br />`taxid:9606(human)`<br />`taxid:9606(Homo sapiens)` |
 
 ### D. Describing controlled vocabularies ###
 
@@ -142,7 +142,7 @@ In MITAB 2.7, 12 columns are controlled vocabulary columns :
 | **Column** | **Data format** | **Example(s)** |
 |:-----------|:----------------|:---------------|
 | columns 7, 12, 16, 17, 18, 19, 20, 21, 22, 41 and 42,   | use **a unique** cross references to the PSI-MI ontology. In parenthesis, it should be the name of the MI term in the ontology | `psi-mi:"MI:0914"(association)` |
-| column 13 | use one to several cross references to the PSI-MI ontology depending on the interaction which can be imported from other databases. | `psi-mi:"MI:0469"(intact)\|psi-mi:"MI:0923"(irefindex)` |
+| column 13 | use one to several cross references to the PSI-MI ontology depending on the interaction which can be imported from other databases. | `psi-mi:"MI:0469"(intact)`<br />`psi-mi:"MI:0923"(irefindex)` |
 
 ### E. Describing interaction and complex expansion ###
 
@@ -170,7 +170,7 @@ The section K gives more information about how to tag interactions.
 
 | **Column** | **Data format** | **Example(s)** |
 |:-----------|:----------------|:---------------|
-| Paramaters of the interaction (col 30) | represented as type:value(text) where type is a parameter type name from the PSI-MI ontology. Multiple values can be separated by '|'. Special characters should not be allowed in MITAB so to represent exponents, fractions or the real values could be used. | kd:"2.34x1/100000 |
+| Paramaters of the interaction (col 30) | represented as type:value(text) where type is a parameter type name from the PSI-MI ontology. Multiple values can be separated by "\|". Special characters should not be allowed in MITAB so to represent exponents, fractions or the real values could be used. | kd:"2.34x1/100000" |
 
 ### H. Describing stoichiometry and self interactions ###
 
@@ -189,7 +189,7 @@ Features of participant A and B can be added in columns 37 and 39 of MITAB 2.7.
 
 | **Column** | **Data format** | **Example(s)** |
 |:-----------|:----------------|:---------------|
-| Features for interactor A and B | describe features or participant A such as binding sites, PTMs, tags, etc. Represented as feature\_type:range(text), where feature\_type is the feature type as described in the PSI-MI controlled vocabulary. For the PTMs, the MI ontology terms are obsolete and the PSI-MOD ontology should be used instead. The text can be used for feature type names, feature names, interpro cross references, etc. The use of the following characters is allowed to describe a range position : ‘?’ (undetermined position), ‘n’ (n terminal range), ‘c’ (c-terminal range), ‘>x’ (greater than x), ‘<’ (less than x), ‘x1..x1’ (fuzzy range position Ex : 5..5-9..10). The character '-' is used to separate start position(s) from end position(s). Multiple features separated by '|'. Multiple ranges per feature separated by ','. However, It is not possible to represent linked features/ranges | sufficient to bind:27-195,201-133 (IPR000785) <br /> gst tag:n-n(n-terminal region)|sufficient to bind:23-45 <br /> binding site:23..24-46,33-33 |
+| Features for interactor A and B | describe features or participant A such as binding sites, PTMs, tags, etc. Represented as feature\_type:range(text), where feature\_type is the feature type as described in the PSI-MI controlled vocabulary. For the PTMs, the MI ontology terms are obsolete and the PSI-MOD ontology should be used instead. The text can be used for feature type names, feature names, interpro cross references, etc. The use of the following characters is allowed to describe a range position : ‘?’ (undetermined position), ‘n’ (n terminal range), ‘c’ (c-terminal range), ‘>x’ (greater than x), ‘<’ (less than x), ‘x1..x1’ (fuzzy range position Ex : 5..5-9..10). The character '-' is used to separate start position(s) from end position(s). Multiple features separated by "\|". Multiple ranges per feature separated by ','. However, It is not possible to represent linked features/ranges | `sufficient to bind:27-195,201-133 (IPR000785)` <br /> `gst tag:n-n(n-terminal region)\|sufficient to bind:23-45` <br /> `binding site:23..24-46,33-33` |
 
 ### J. Interaction confidence nomenclature ###
 
@@ -205,11 +205,12 @@ _{service}-{score method}-{profile}_
   * profile = Name used to define a specific way to calculate the score. This could include specific parameters or configuration for a scoring method.
 "service", "score method" and "profile" would be optional, but at least one of them should be present.
 
-<br />
-_e.g. 	intact-miscore-default: 0.36    {service}-{score method}-{profile}
-miscore-default:0.36         {score method}-{profile}
- 		miscore-imex:0.20         {score method}-{profile}
- miscore-psicquic:0.60         {score method}-{profile}_
+
+_e.g._	
+`intact-miscore-default:0.36  {service}-{score method}-{profile}`
+`miscore-default:0.36         {score method}-{profile}`
+`miscore-imex:0.20            {score method}-{profile}`
+`miscore-psicquic:0.60        {score method}-{profile}`
 
 This level of detail is important as the score will differ not only with method, but also with the dataset over which the score is run and the parameters set.
 
