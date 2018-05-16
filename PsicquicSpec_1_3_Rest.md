@@ -40,7 +40,7 @@ Other methods exist to get additional information about the service, such as spe
 
 The structure of the URL to fetch data from PSICQUIC is this one:
 
-<img width='800' src='https://github.com/PSICQUIC/psicquic-documentation/blob/master/images/PSICQUIC_REST_URL-2.png' />
+<img width='800' src='/images/PSICQUIC_REST_URL-2.png' />
 
 e.g. http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/species:human?firstResult=0&maxResults=100
 
