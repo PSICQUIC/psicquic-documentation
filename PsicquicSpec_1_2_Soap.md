@@ -2,7 +2,7 @@
 
 The documentation in this page corresponds to the version 1.2 of the PSICQUIC specification.
 
-Using SOAP is the traditional way to access a web service. The PSICQUIC specification defines a [standard WSDL](http://code.google.com/p/psicquic/source/browse/trunk/psicquic-solr-ws/src/main/wsdl/psicquic11.wsdl) that all the implementations must comply with. This file contains the list of web service methods available for users.
+Using SOAP is the traditional way to access a web service. The PSICQUIC specification defines a [standard WSDL](https://github.com/PSICQUIC/psicquic-solr-ws/blob/master/src/main/wsdl/psicquic11.wsdl) that all the implementations must comply with. This file contains the list of web service methods available for users.
 
 The SOAP URL for the different interaction databases can be found in the [Registry](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS). To fetch the WSDL just append **`?wsdl`** to the SOAP URL ([example](http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/psicquic?wsdl)).
 
@@ -22,11 +22,11 @@ Methods to retrieve properties from the service have been added. These propertie
 
 | Method Name | Description |
 |:------------|:------------|
-| **[getByQuery](#Method:_getByQuery.md)** | Retrieve data using a [MIQL query](MiqlDefinition.md) |
-| **[getByInteractor](#Method:_getByInteractor.md)** | Retrieve data using a specific participant identifier |
-| **[getByInteractorList](#Method:_getByInteractorList.md)** | Retrieve data using a list of participant identifiers. This method can be used to retrieve interactions where the two or more participants passed as arguments are found. To do so, set the operand to _AND_. |
-| **[getByInteraction](#Method:_getByInteraction.md)** | Retrieve a specific interaction using its identifier |
-| **[getByInteractionList](#Method:_getByInteractionList.md)** | Retrieve a list of interactions, using the identifiers |
+| **[getByQuery](#Method:-getByQuery)** | Retrieve data using a [MIQL query](MiqlDefinition.md) |
+| **[getByInteractor](#Method:-getByInteractor)** | Retrieve data using a specific participant identifier |
+| **[getByInteractorList](#Method:-getByInteractorList)** | Retrieve data using a list of participant identifiers. This method can be used to retrieve interactions where the two or more participants passed as arguments are found. To do so, set the operand to _AND_. |
+| **[getByInteraction](#Method:-getByInteraction)** | Retrieve a specific interaction using its identifier |
+| **[getByInteractionList](#Method:-getByInteractionList)** | Retrieve a list of interactions, using the identifiers |
 
 
 Other methods to retrieve information about the service itself (metadata) are also available:
@@ -54,13 +54,13 @@ This section explains the parameters that can be used in the above methods.
 | **Name** | **Type** | **Required** | **Description** | **Example(s)** |
 |:---------|:---------|:-------------|:----------------|:---------------|
 | query  | String  | Yes | The [MIQL query](MiqlReference.md) to use |  |
-| infoRequest  | [infoRequest](#infoRequest.md)  | Yes | Used to describe the format our to define the pagination |  |
+| infoRequest  | [infoRequest](#infoRequest)  | Yes | Used to describe the format our to define the pagination |  |
 
 **Output parameters**:
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| queryResponse | [queryResponse](#queryResponse.md) | Complex object containing the resulting data and some metadata about the results |
+| queryResponse | [queryResponse](#queryResponse) | Complex object containing the resulting data and some metadata about the results |
 
 
 ### Method: getByInteractor ###
@@ -71,14 +71,14 @@ This section explains the parameters that can be used in the above methods.
 
 | **Name** | **Type** | **Required** | **Description** | **Example(s)** |
 |:---------|:---------|:-------------|:----------------|:---------------|
-| dbRef  | [dbRef](#dbRef.md)  | Yes | The identifier to search for |  |
-| infoRequest  | [infoRequest](#infoRequest.md)  | Yes | Used to describe the format our to define the pagination |  |
+| dbRef  | [dbRef](#dbRef)  | Yes | The identifier to search for |  |
+| infoRequest  | [infoRequest](#infoRequest)  | Yes | Used to describe the format our to define the pagination |  |
 
 **Output parameters**:
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| queryResponse | [queryResponse](#queryResponse.md) | Complex object containing the resulting data and some metadata about the results |
+| queryResponse | [queryResponse](#queryResponse) | Complex object containing the resulting data and some metadata about the results |
 
 
 ### Method: getByInteractorList ###
@@ -89,15 +89,15 @@ This section explains the parameters that can be used in the above methods.
 
 | **Name** | **Type** | **Required** | **Description** | **Example(s)** |
 |:---------|:---------|:-------------|:----------------|:---------------|
-| dbRefs  | List of [dbRef](#dbRef.md)  | Yes | The identifiers to search for |  |
-| infoRequest  | [infoRequest](#infoRequest.md)  | Yes | Used to describe the format our to define the pagination |  |
+| dbRefs  | List of [dbRef](#dbRef)  | Yes | The identifiers to search for |  |
+| infoRequest  | [infoRequest](#infoRequest)  | Yes | Used to describe the format our to define the pagination |  |
 | Operand | String | No | When multiple identifiers are provided two options are possible, dependening if we want to (a) find the interaction where ALL the provided identifiers are found or (b) just get a list of interactions where ANY of the identifiers is found. For (a) the value of _operand_ is '**AND**', whereas for (b) is '**OR**' (default) | AND, <br />OR |
 
 **Output parameters**:
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| queryResponse | [queryResponse](#queryResponse.md) | Complex object containing the resulting data and some metadata about the results |
+| queryResponse | [queryResponse](#queryResponse) | Complex object containing the resulting data and some metadata about the results |
 
 
 ### Method: getByInteraction ###
@@ -108,14 +108,14 @@ This section explains the parameters that can be used in the above methods.
 
 | **Name** | **Type** | **Required** | **Description** | **Example(s)** |
 |:---------|:---------|:-------------|:----------------|:---------------|
-| dbRef  | [dbRef](#dbRef.md)  | Yes | The identifier to search for |  |
-| infoRequest  | [infoRequest](#infoRequest.md)  | Yes | Used to describe the format our to define the pagination |  |
+| dbRef  | [dbRef](#dbRef)  | Yes | The identifier to search for |  |
+| infoRequest  | [infoRequest](#infoRequest)  | Yes | Used to describe the format our to define the pagination |  |
 
 **Output parameters**:
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| queryResponse | [queryResponse](#queryResponse.md) | Complex object containing the resulting data and some metadata about the results |
+| queryResponse | [queryResponse](#queryResponse) | Complex object containing the resulting data and some metadata about the results |
 
 
 ### Method: getByInteractionList ###
@@ -126,14 +126,14 @@ This section explains the parameters that can be used in the above methods.
 
 | **Name** | **Type** | **Required** | **Description** | **Example(s)** |
 |:---------|:---------|:-------------|:----------------|:---------------|
-| dbRefs  | List of [dbRef](#dbRef.md)  | Yes | The identifiers to search for |  |
-| infoRequest  | [infoRequest](#infoRequest.md)  | Yes | Used to describe the format our to define the pagination |  |
+| dbRefs  | List of [dbRef](#dbRef)  | Yes | The identifiers to search for |  |
+| infoRequest  | [infoRequest](#infoRequest)  | Yes | Used to describe the format our to define the pagination |  |
 
 **Output parameters**:
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| queryResponse | [queryResponse](#queryResponse.md) | Complex object containing the resulting data and some metadata about the results |
+| queryResponse | [queryResponse](#queryResponse) | Complex object containing the resulting data and some metadata about the results |
 
 
 ## Complex Objects ##
@@ -161,14 +161,14 @@ When doing queries, the results must be paginated to avoid memory problems. All 
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| resultSet | [resultSet](#resultSet.md) | Contains the results of the query |
-| resultInfo | [resultInfo](#resultInfo.md) | Information about the query, such as the total number of results found |
+| resultSet | [resultSet](#resultSet) | Contains the results of the query |
+| resultInfo | [resultInfo](#resultInfo) | Information about the query, such as the total number of results found |
 
 ### resultSet ###
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| mitab | String | When the _psi-mi/tab25_ format is used, this elements contains the resulting data as a String in MITAB format. Lines are separated by a carriage return. |
+| mitab | String | When the _psi-mi/tab25_ format is used, this element contains the resulting data as a String in MITAB format. Lines are separated by a carriage return. |
 | entrySet | PSI-MI XML 2.5 | When the _psi-mi/xml25_ format is used, the XML file with the results is embedded in the response |
 
 ### resultInfo ###

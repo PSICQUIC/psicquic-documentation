@@ -2,7 +2,7 @@
 
 ## Purpose ##
 
-One of the aim of this guideline is to provide the community with a tool that could help adding useful information to an existing MITAB 27 dataset (but because MITAB 2.7 is backward compatible with MITAB 2.5 and 2.6, the enricher can be used in MITAB 2.5 and 2.6 but will add less information than in MITAB 2.7). A tool, (referred later on as “Enricher”) could consume MITAB data, add extra information about molecules, controlled vocabularies, publication and return enriched MITAB content which follows the [Data best practices](http://code.google.com/p/psicquic/wiki/DataDistributionBestPractices). Below are a few data items that could be enriched automatically:
+One of the aim of this guideline is to provide the community with a tool that could help adding useful information to an existing MITAB 27 dataset (but because MITAB 2.7 is backward compatible with MITAB 2.5 and 2.6, the enricher can be used in MITAB 2.5 and 2.6 but will add less information than in MITAB 2.7). A tool, (referred later on as “Enricher”) could consume MITAB data, add extra information about molecules, controlled vocabularies, publication and return enriched MITAB content which follows the [Data best practices](DataDistributionBestPractices.md). Below are a few data items that could be enriched automatically:
   * molecule identifiers, aliases, xrefs and checksum
   * Controlled vocabulary terms could have their names added provided an ontology identifier is present, eg:
     * interaction detection method (column #7),
@@ -32,26 +32,27 @@ The Data enricher would use the identifiers in columns 1 and 2 (unique identifie
 
 #### 1. Proteins ####
 
-For higher organisms, the curator may have several isoforms of a protein to select from. In most cases, the experimental evidence will not be sufficient to make an unambiguous mapping. In such a case, most protein interaction databases will make a mapping to the canonical !UniProtKB sequence e.g. P51123 to indicate that the interaction could be with some or all of the potential isoforms. Where a mapping to a specific isoform e.g. P51123-3 can be made, it will be. Gene-centric databases will map to the gene identifier in all cases. Whenever the curator has chosen a specific splice variant, its identifier should appear under the unique identifier column.
+For higher organisms, the curator may have several isoforms of a protein to select from. In most cases, the experimental evidence will not be sufficient to make an unambiguous mapping. In such a case, most protein interaction databases will make a mapping to the canonical UniProtKB sequence e.g. P51123 to indicate that the interaction could be with some or all of the potential isoforms. Where a mapping to a specific isoform e.g. P51123-3 can be made, it will be. Gene-centric databases will map to the gene identifier in all cases. Whenever the curator has chosen a specific splice variant, its identifier should appear under the unique identifier column. Some examples of annotated proteins:
 
-| ensembl:ENSG00000136869|innatedb:IDBG-82738 |
-|:--------------------------------------------|
-
-| uniprotkb:O00206|uniprotkb:TLR4\_HUMAN|refseq:NM\_138554|refseq:NP\_612564|refseq:NR\_024169|refseq:NR\_024168 |
-|:---------------------------------------------------------------------------------------------------------------|
+|    |    |
+|:---|:---|
+|ensembl:ENSG00000136869|innatedb:IDBG-82738|
+|uniprotkb:O00206|uniprotkb:TLR4\_HUMAN|
+|refseq:NM\_138554|refseq:NP\_612564|
+|refseq:NR\_024169|refseq:NR\_024168|
 
 **How to pick the canonical sequence for a given protein ?**
 
-The sequence defined at the top level of a !UniProtKB entry is considered a canonical sequence i.e. P51123. All isoforms linked to this entries (having their own potential sequence variation) would link to this top level sequence which is the canonical sequence for the entry (note, it will be an exact match to one of the isoforms). For example: should your molecule be P51123-3, the canonical sequence would be P51123.
+The sequence defined at the top level of a UniProtKB entry is considered a canonical sequence i.e. P51123. All isoforms linked to this entries (having their own potential sequence variation) would link to this top level sequence which is the canonical sequence for the entry (note, it will be an exact match to one of the isoforms). For example: should your molecule be P51123-3, the canonical sequence would be P51123.
 Should the protein be described using a gene identifier (as seen in a minority of PSICQUIC services), it is recommended to map this identifier to the corresponding UniProt/Swiss-Prot canonical sequence, given a specific species, there should be only one corresponding UniProt/Swiss-Prot entry. If the entry is only in UniProtKB/TrEMBL, selecting the longest ORF for that gene is the conventional method for performing a 1:1 mapping.
 
-**How to map !UniProtKB proteins to RefSeq ?**
+**How to map UniProtKB proteins to RefSeq ?**
 
-Some proteins may have related isoforms resulting from different splice isoforms of the mRNA or from alternative promoter usage. !UniProtKB does give different identifiers to these entities and it is possible to map them to RefSeq by using the [PICR Identifier mapping](http://www.ebi.ac.uk/Tools/picr) service. In case of isoforms, PICR would be able to map it to the corresponding RefSeq identifier.
+Some proteins may have related isoforms resulting from different splice isoforms of the mRNA or from alternative promoter usage. UniProtKB does give different identifiers to these entities and it is possible to map them to RefSeq by using the [PICR Identifier mapping](http://www.ebi.ac.uk/Tools/picr) service. In case of isoforms, PICR would be able to map it to the corresponding RefSeq identifier.
 
 **How would it work in practice ?**
 
-For proteins, the Data Enricher can :
+For proteins, the Data Enricher can:
   * remap identifiers from any databases listed in [PICR](http://www.ebi.ac.uk/Tools/picr/) to a single UniProtKB identifier when possible. For that, it is important to give unambiguous identifiers in columns 1 and 2 and to give the organism of the protein in columns 10 and 11. The organism is very important to be able to remap to a single uniprot accession. The Data Enricher will always remap to the master uniprot entry (canonical sequence) even if an identifier can match a single uniprot splice variant identifier. When the remapping is successful, the Enricher will not delete the original identifier but just move it to 'alternative identifiers' in columns 3 and 4 and add the remapped uniprot accession in columns 1 and 2 for 'unique identifier'. In several cases, the remapping is too ambiguous and the enricher would not enrich the line but just log a warning:
     * Several Swissprot entries can match
     * Several Trembl entries can match and have the same sequence length (but different sequences)
@@ -65,15 +66,14 @@ For proteins, the Data Enricher can :
 
 | **Protein accession** | **ROGID** | **CROGID** | **RefSeq** |
 |:----------------------|:----------|:-----------|:-----------|
-| `P51123` | `rogid:DxUDrj8iljY131pQOBswejQxoxI7227` | `rogid:DxUDrj8iljY131pQOBswejQxoxI7227` | `NP_996160` |
+| `P51123`   | `rogid:DxUDrj8iljY131pQOBswejQxoxI7227` | `rogid:DxUDrj8iljY131pQOBswejQxoxI7227` | `NP_996160` |
 | `P51123-2` | `rogid:nqWqHc3mUUZtYVGzCr3UZq60DRU7227` | `rogid:DxUDrj8iljY131pQOBswejQxoxI7227` | `NP_476956` |
-
 
 <br />
 
 | What information | Target Column | Data source |
 |:-----------------|:--------------|:------------|
-| gene name, gene name synonym, orf, locus name, recommended name, display\_short and display\_long | 5 & 6 | !UniProtKB |
+| gene name, gene name synonym, orf, locus name, recommended name, display\_short and display\_long | 5 & 6 | UniProtKB |
 | Additional database cross references (e.g. primary database identifier such as RefSeq or UniProt), uniprot secondary AC | 3 & 4 | UniProtKB, PICR |
 | Organism name (only if no conflicts with uniprot entry) | 10 & 11 | UniProt Taxonomy |
 | Model organism database (Flybase, TAIR, SGD...), GO, interpro,... | 23 & 24 | UniProtKB |
@@ -108,7 +108,7 @@ The enrichment process here would rely on the existence of a !ChEBI identifier i
 
 #### 3. Nucleic Acids and genes ####
 
-It was agreed during the PSI meeting 2012 that the Data Enricher will not enrich genes and nucleic acids. It will be up to the data provider to follow the data best practices and provides :
+It was agreed during the PSI meeting 2012 that the Data Enricher will not enrich genes and nucleic acids. It will be up to the data provider to follow the data best practices and provide:
 
   * unique embl/ddbj/genbank identifier for small nucleic acids in columns 1 and 2. It is recommended to move the other identifiers to alternative identifiers and Interactor xrefs.
   * unique ensembl genome, ensembl or gene id/locus link identifier for genes in columns 1 and 2. It is recommended to move the other identifiers to alternative identifiers and Interactor xrefs.
@@ -123,7 +123,7 @@ In case of proteins and small molecules, the organism enrichment will depend on 
 
 ##### Enrichment Process #####
 
-For organisms (interactor organisms in columns 10 and 11 and host organism in column 29), the Data Enricher can :
+For organisms (interactor organisms in columns 10 and 11 and host organism in column 29), the Data Enricher can:
 
   * add the missing organism for proteins and small molecules (and genes as well?) when possible (columns 10 and 11 only)
   * add the common name and scientific name as defined in the data best practices (columns 10, 11 and 29)
@@ -134,7 +134,7 @@ To be able to enrich the publication, a pubmed id (or IMEx id) is necessary in c
 
 ##### Enrichment Process #####
 
-For publications, the Data Enricher can :
+For publications, the Data Enricher can:
 
   * For each pubmed id, it will add the first author name and publication date as defined in the data best practices
 

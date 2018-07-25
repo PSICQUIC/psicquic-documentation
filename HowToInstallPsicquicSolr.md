@@ -1,6 +1,6 @@
 ## PSICQUIC reference implementation based on SOLR (recommended) ##
 
-The new PSICQUIC Reference Implementation is now based on SOLR which is an indexing software based on LUCENE. It can index MITAB 2.5, 2.6 and 2.7 files.
+The new PSICQUIC Reference Implementation is now based on SOLR which is an indexing software based on LUCENE. It can index MITAB 2.5, 2.6, 2.7 and 2.8 files.
 
 You have two ways for building your psicquic webservice :
 

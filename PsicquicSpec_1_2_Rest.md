@@ -31,7 +31,7 @@ Other methods exist to get additional information about the service, such as spe
 
 The structure of the URL to fetch data from PSICQUIC is this one:
 
-<img width='800' src='https://raw.githubusercontent.com/MICommunity/psicquic/master/images/PSICQUIC_REST_URL-2.png' />
+![image_rest_url](/images/PSICQUIC_REST_URL_v1.3.png)
 
 e.g. http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/species:human?firstResult=0&maxResults=100
 
@@ -43,14 +43,13 @@ The first element of the URL is, of course, the location of the web service. Che
 
 #### VERSION ####
 
-At this moment only one version of PSICQUIC exist. With time, more versions might exist. The possible values for this bit are:
+At this moment 3 versions of PSICQUIC exist. With time, more versions might exist. The possible values for this bit are:
 
 | **Version** | **Description** |
 |:------------|:----------------|
 | v1.0 | Version 1.0 of the REST PSICQUIC specification |
 | v1.1 | Version 1.1 of the REST PSICQUIC specification |
 | v1.2 | Version 1.2 of the REST PSICQUIC specification |
-| v1.3 | Version 1.3 of the REST PSICQUIC specification |
 | current | Will map always to the most current version. It works as a symbolic link |
 
 #### METHODS TO RETRIEVE MOLECULAR INTERACTION DATA ####
@@ -68,8 +67,9 @@ As we said before, there are different methods available to retrieve data:
 
 These metadata methods return information about the service:
 
+| **Method** | **Since spec version** | **Description** |
+|:-----------|:-----------------------|:----------------|
 | property | v1.1 | To get the value of a property |
-|:---------|:-----|:-------------------------------|
 | properties | v1.1 | Lists all the available properties |
 | formats | v1.0 | Lists the return formats supported by the service |
 | version | v1.0 | Implementation version |
@@ -110,8 +110,6 @@ This is the list of available formats:
 | **Format parameter** | Since Spec | Description |
 |:---------------------|:-----------|:------------|
 | tab25 | 1.0 | PSI-MITAB 2.5 |
-| tab26 | 1.3 | PSI-MITAB 2.6 |
-| tab27 | 1.3 | PSI-MITAB 2.7 |
 | xml25 | 1.0 | PSI-MIXML 2.5.4 |
 | count | 1.0 | Just the total count |
 | biopax | 1.2 | BioPAX - append -L2 or -L3 to the parameter if a specific level is desired |
@@ -165,13 +163,13 @@ REST relies on direct HTTP communication. Errors are reported using HTTP status 
 ## Some Examples ##
 
   * Getting the result for "brca2" in PSI-MITAB 2.5 format
-> > http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/brca2
+> http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/brca2
 
   * The same, in PSI-MI XML 2.5.4 format
-> > http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/brca2?format=xml25
+> http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/brca2?format=xml25
 
   * It supports paging. For instance, search for "species:human" and get only the first 100 results
-> > http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/species:human?firstResult=0&maxResults=100
+> http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/species:human?firstResult=0&maxResults=100
 
   * All of matrixdb in PSI-MITAB format
-> > http://matrixdb.ibcp.fr:8080/webservices/current/search/query/*
+> http://matrixdb.univ-lyon1.fr:8080/psicquic/webservices/current/search/query/*

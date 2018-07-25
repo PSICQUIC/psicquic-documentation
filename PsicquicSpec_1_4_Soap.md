@@ -1,6 +1,6 @@
-# Version 1.3 #
+# Version 1.4 #
 
-The documentation in this page corresponds to the version 1.3 of the PSICQUIC specification.
+The documentation in this page corresponds to the version 1.4 of the PSICQUIC specification.
 
 Using SOAP is the traditional way to access a web service. The PSICQUIC specification defines a [standard WSDL](https://github.com/PSICQUIC/psicquic-solr-ws/blob/master/src/main/wsdl/psicquic11.wsdl) that all the implementations must comply with. This file contains the list of web service methods available for users.
 
@@ -9,6 +9,11 @@ The SOAP URL for the different interaction databases can be found in the [Regist
 **Important note**: the maximum number of interactions in XML format that can be returned by a SOAP request is **500**. If you want to retrieve more results, do an iteration of requests incrementing the _firstResult_ parameter by 500 until you reach the total number of results.
 
 ## Differences from previous versions ##
+
+### From version 1.3 ###
+
+  * The WSDL file has not been updated so the SOAP methods are the same as for the 1.3, 1.2 and 1.1 versions.
+  * psi-mi/tab28 is now accepted. The ResultSet returned by the SOAP service will contain the MITAB (2.5, 2.6, 2.7 or 2.8) as a String (same as for the previous versions explaining why the WSDL file has not been updated since version 1.1)
 
 ### From version 1.2 ###
 
@@ -158,7 +163,7 @@ This section explains the parameters that can be used in the above methods.
 
 | **Name** | **Type** | **Required** | **Description** | **Default** |
 |:---------|:---------|:-------------|:----------------|:------------|
-| resultType | String | No | Format of the returned results. Possible options are: <br /> '**psi-mi/tab25**' (default): MITAB format. <br /> '**psi-mi/tab26**': MITAB 26 format (not all services provide this format). <br /> '**psi-mi/tab27**': MITAB 27 format (not all services provide this format).  <br /> '**psi-mi/xml25**': PSI-MI XML 2.5.4 format.<br />'**count**': just contains the result counts. | psi-mi/tab25 |
+| resultType | String | No | Format of the returned results. Possible options are: <br /> '**psi-mi/tab25**' (default): MITAB format. <br /> '**psi-mi/tab26**': MITAB 26 format (not all services provide this format). <br /> '**psi-mi/tab27**': MITAB 27 format (not all services provide this format).  <br /> '**psi-mi/tab28**': MITAB 28 format (not all services provide this format). <br /> '**psi-mi/xml25**': PSI-MI XML 2.5.4 format.<br />'**count**': just contains the result counts. | psi-mi/tab25 |
 | firstResult | Integer | No | Index for the first returned value (offset) | 0 |
 | blockSize | Integer | No | Number of results to be returned. Maximum is **200**, so higher values will be ignored. | 0 |
 
@@ -175,7 +180,7 @@ When doing queries, the results must be paginated to avoid memory problems. All 
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| mitab | String | When the _psi-mi/tab25_, _psi-mi/tab26_ or _psi-mi/tab27_ format is used, this element contains the resulting data as a String in MITAB format. Lines are separated by a carriage return. |
+| mitab | String | When the _psi-mi/tab25_, _psi-mi/tab26_, _psi-mi/tab27_ or _psi-mi/tab28_ format is used, this element contains the resulting data as a String in MITAB format. Lines are separated by a carriage return. |
 | entrySet | PSI-MI XML 2.5 | When the _psi-mi/xml25_ format is used, the XML file with the results is embedded in the response |
 
 ### resultInfo ###
@@ -197,4 +202,5 @@ The default return types are:
   * **psi-mi/tab25**: returns PSI-MI TAB 2.5 format.
   * **psi-mi/tab26**: returns PSI-MI TAB 2.6 format. (not all services provide this format)
   * **psi-mi/tab27**: returns PSI-MI TAB 2.7 format. (not all services provide this format)
+  * **psi-mi/tab28**: returns PSI-MI TAB 2.8 format. (not all services provide this format)
   * **psi-mi/xml25**: returns PSI-MI XML 2.5.4 format.

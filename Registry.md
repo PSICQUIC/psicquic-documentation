@@ -1,6 +1,6 @@
 # The Registry
 
-A [registry](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS) exists that shows which PSICQUIC services exist and what is their current state. It can be found here [http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS).
+A [registry](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS) exists that shows which PSICQUIC services exist and what is their current state. It can be found here: [http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS).
 
 The registry also shows the number of total binary interactions that each resource has made available through PSICQUIC.
 
@@ -16,12 +16,12 @@ The following table summarises the different parameters that can be passed to th
 
 | **Parameter** | **Mandatory** | **Default** | **Description** |
 | :--- | :--- | :--- | :--- |
-| \[action\]\(\#The\_'action'\_parameter.md\) | Yes |  | The action to be done |
-| \[format\]\(\#The\_'format'\_parameter.md\) | No |  | The format to use when viewing the registry |
-| \[name\]\(\#The\_'name'\_parameter.md\) | No |  | Filters the list by name |
-| \[protocol\]\(\#The\_'protocol'\_parameter.md\) | No | soap | Allows to retrieve soap or rest urls from the services |
-| \[restricted\]\(\#The\_'restricted'\_parameter.md\) | No | y | Allows to filter the restricted services from the list |
-| \[tags\]\(\#The\_'tags'\_parameter.md\) | No |  | Allows to filter by tag the services from the list |
+| [action](#The-'action'-parameter) | Yes |  | The action to be done |
+| [format](#The-'format'-parameter) | No |  | The format to use when viewing the registry |
+| [name](#The-'name'-parameter) | No |  | Filters the list by name |
+| [protocol](#The-'protocol'-parameter) | No | soap | Allows to retrieve soap or rest urls from the services |
+| [restricted](#The-'restricted'-parameter) | No | y | Allows to filter the restricted services from the list |
+| [tags](#The-'tags'-parameter) | No |  | Allows to filter by tag the services from the list |
 
 ### Parameters
 
@@ -48,12 +48,10 @@ This parameter is optional. The default behaviour is to show an web page with th
 
 #### The 'name' parameter
 
-The **name** is optional and can be used just to get the information for one specific service.
+The **name** is optional and can be used just to get the information for one specific service. Examples:
 
-```
-http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&name=IntAct
-http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&name=MINT&format=xml
-```
+[http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&name=IntAct](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&name=IntAct)
+[http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&name=MINT&format=xml](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&name=IntAct)
 
 #### The 'protocol' parameter
 
@@ -80,9 +78,9 @@ Here are a few sample queries:
 
 | **Description** | **Query** | **URL** |
 | :--- | :--- | :--- |
-| Only IMEx data providers | imex curation | [http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&tags=imex curation](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&tags=imex curation) |
-| protein protein interaction and internally-curated | protein-protein AND internally-curated | [http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&tags=protein-protein AND internally-curated](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&tags=protein-protein AND internally-curated) |
-| protein protein interaction AND neither text mining nor predicted | protein-protein AND NOT \(text-mining OR predicted\) | [http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&tags=protein-protein  AND NOT \(text-mining OR predicted\) ](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&tags=protein-protein AND NOT%28text-mining OR MI%3A1057%29) |
+| Only IMEx data providers | imex curation | [http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&tags=imex curation](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&tags=imex%20curation) |
+| protein protein interaction and internally-curated | protein-protein AND internally-curated | [http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&tags=protein-protein AND internally-curated](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&tags=protein-protein%20AND%20internally-curated) |
+| protein protein interaction AND neither text mining nor predicted | protein-protein AND NOT \(text-mining OR predicted\) | [http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&tags=protein-protein AND NOT \(text-mining OR predicted\) ](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&tags=protein-protein%20AND%20NOT%28text-mining%20OR%20MI%3A1057%29) |
 
 Please note that when encoding the query into a URL you will have to encode special characters following [standard guidelines](http://www.w3schools.com/tags/ref_urlencode.asp). For your convenience we have summarised the main ones you will need with tags here:
 

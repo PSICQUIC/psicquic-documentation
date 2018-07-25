@@ -5,7 +5,7 @@ There are two JAVA clients provided by the project at the moment:
   * **PSICQUIC Simple Client**: it does not have dependencies. Provides basic access to the services by retrieving the raw data. It does not parse the results. It is REST based.
   * **PSICQUIC Client**: it has more dependencies, because it contains different models to manipulate the results in a Java object oriented way. At the moment it uses SOAP access, but this will be soon replaced to use the Simple Client behind the scenes soon.
 
-Both can be found in the [Downloads](http://code.google.com/p/psicquic/downloads/list) section, or obtained using Maven.
+You can download the clients [here](https://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/org/hupo/psi/mi/psicquic/), or obtain them using Maven.
 
 The following table summarises the differences between the two clients, described in more detail below:
 
@@ -18,7 +18,7 @@ The following table summarises the differences between the two clients, describe
 | **Integration with model**	| None (but easily integrated)	| Full integration with XML and MITAB models |
 | **Speed**	| Faster	| Slower (due to response generation) |
 | **Bandwidth**	| Smaller	| Larger (SOAP evelope and response) |
-| **Compression**	| Available using specific format	| Yes |
+| **Compression**	| Yes	| Yes |
 | **Compatibility**	| PSICQUIC 1.1 or higher	| PSICQUIC 1.0 or higher |
 
 ## PSICQUIC Simple Client ##
@@ -101,29 +101,28 @@ As of now, this dependency is hosted at the European Bioinformatics Institute (E
     </repositories>
 ```
 
-An example on how to use the client can be found [here](http://code.google.com/p/psicquic/source/browse/trunk/psicquic-client/src/example/java/org/hupo/psi/mi/psicquic/example/PsicquicClientExample.java).
+Examples on how to use the client can be found [here](https://github.com/PSICQUIC/psicquic-client/tree/master/src/example/java/org/hupo/psi/mi/psicquic/example).
 
 
 ### Examples of Use ###
 
-You can use code like [this one](http://code.google.com/p/psicquic/source/browse/trunk/psicquic-client/src/example/java/org/hupo/psi/mi/psicquic/example/PsicquicClientExample.java) to start using the PSICQUIC service.
+You can use code like [this one](https://github.com/PSICQUIC/psicquic-client/tree/master/src/example/java/org/hupo/psi/mi/psicquic/example) to start using the PSICQUIC service.
 
 ### Building the client from sources ###
 
-The sources for this client can be found as part of the project source code. Follow the instructions in the [Source](http://code.google.com/p/psicquic/source/checkout) page to checkout the code.
+The sources for this client can be found as part of the [project source code](https://github.com/PSICQUIC/psicquic-client).
 
-Once you have the code, the client can be found in the `psicquic-client` folder. If you want to build the project, execute the Maven 2 command:
+Once you have the code and you want to build the project, execute the Maven command:
 
 ```
 cd psicquic-client
 mvn clean install
 ```
 
-# Using other programing languages #
+# Using other programming languages #
 
 If you are not using JAVA, you can generate your client code using the WSDL file directly. The WSDL can be found at:
 
-  * version 1.0
-http://psicquic.googlecode.com/svn/trunk/psicquic-webservice/src/main/wsdl/psicquic10.wsdl
-  * version 1.1 (recommended)
-http://psicquic.googlecode.com/svn/trunk/psicquic-webservice/src/main/wsdl/psicquic11.wsdl
+  * version 1.0 : 
+https://github.com/PSICQUIC/psicquic-solr-ws/blob/master/src/main/wsdl/psicquic10.wsdl
+  * version 1.1 (recommended) : https://github.com/PSICQUIC/psicquic-solr-ws/blob/master/src/main/wsdl/psicquic11.wsdl

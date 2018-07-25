@@ -36,7 +36,7 @@ We have so far put together the 5 categories of tags described below:
   * matrix expansion (MI:1061)
   * bipartite expansion (MI:1062)
 
-You can refer to the [Registry](Registry#The_'tags'_parameter.md) documentation to find out how to use the tags to query for specific lists of services.
+You can refer to the [Registry](Registry.md#The-'tags'-parameter) documentation to find out how to use the tags to query for specific lists of services.
 
 # Current limitations #
 

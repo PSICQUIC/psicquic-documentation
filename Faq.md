@@ -3,12 +3,12 @@
 <br />
 
 ## Are there guidelines on how to create valid PSIMITAB ? ##
-The original format (version 2.5) itself was first described in [Kerrien et al. (2007)](http://www.ncbi.nlm.nih.gov/pubmed/17925023) but you can also find it as part of the PSI-MI and PSICQUIC documentation. These documents only describe the various columns of the PSIMITAB format (2.5, 2.6 and 2.7) and the syntax of the data that can be stored. In addition to the format, the PSI-MI workgroup has defined a guideline referred to as [Data Distribution Best Practices](http://code.google.com/p/psicquic/wiki/DataDistributionBestPractices) that aims at standardising the use of the format to maximize its effectiveness. It is strongly recommended to read these documents before attempting to build a dataset using the [PSIMITAB 25 format](http://code.google.com/p/psicquic/wiki/MITAB25Format), [PSIMITAB 26 format](http://code.google.com/p/psicquic/wiki/MITAB26Format) or [PSIMITAB 27 format](http://code.google.com/p/psicquic/wiki/MITAB27Format).
+The original format (version 2.5) itself was first described in [Kerrien et al. (2007)](http://www.ncbi.nlm.nih.gov/pubmed/17925023) but you can also find it as part of the PSI-MI and PSICQUIC documentation. These documents only describe the various columns of the PSIMITAB format (2.5, 2.6, 2.7 and 2.8) and the syntax of the data that can be stored. In addition to the format, the PSI-MI workgroup has defined a guideline referred to as [Data Distribution Best Practices](DataDistributionBestPractices.md) that aims at standardising the use of the format to maximize its effectiveness. It is strongly recommended to read these documents before attempting to build a dataset using the [PSIMITAB 2.5](MITAB25Format.md), [PSIMITAB 2.6](MITAB26Format.md), [PSIMITAB 2.7](MITAB27Format.md) or [PSIMITAB 2.8](MITAB27Format.md) format.
 <br />
 
 
 ## What identifier should I use to describe my Interacting Proteins ? ##
-Most PSICQUIC providers are using UniProtKB ACs to describe their proteins, and this allows these services to be easily combined together. For more information, look at the [Data Distribution Best Practices](http://code.google.com/p/psicquic/wiki/DataDistributionBestPractices).
+Most PSICQUIC providers are using UniProtKB ACs to describe their proteins, and this allows these services to be easily combined together. For more information, look at the [Data Distribution Best Practices](DataDistributionBestPractices.md).
 <br />
 
 
@@ -50,8 +50,8 @@ So now if a user queries the non-clustered service with the following MIQL:
 NOT detmethod:coip
 ```
 
-the response contains a single line (i.e. the two hybrid evidence)
-When the user runs the same query on the clustered service, the response shows no data as the whole line has been removed as it contains a coip evidence, leading the user to miss potentially critical information.
+the response contains a single line (i.e. the two hybrid evidence).
+When the user runs the same query on the clustered service, the response shows no data because the whole line has been removed as it contains a coip evidence, leading the user to miss potentially critical information.
 <br />
 
 
@@ -73,4 +73,4 @@ The data type that can be used are defined in this branch of the [PSI-MI ontolog
 
 
 ## How should I use the Unique Identifier/Alternative Identifier columns ? ##
-These columns have different purposes, all of which are geared toward identifying the interacting molecule unambiguously. While the unique identifier is meant as a single cross reference to a public database, the alternative identifier column should be used to maintain a collection of alternative identifiers potentially encompassing secondary identifiers (e.g. UniProtKB), model organism databases (SGD, FlyBase...), translation to other biological concept (e.g. the molecule descibed is a protein but I could store an ensembl or entrez geneid). The [Data Distribution Best Practices](http://code.google.com/p/psicquic/wiki/DataDistributionBestPractices) does give some additional information with respect to which specific cross reference to use.
+These columns have different purposes, all of which are geared toward identifying the interacting molecule unambiguously. While the unique identifier is meant as a single cross reference to a public database, the alternative identifier column should be used to maintain a collection of alternative identifiers potentially encompassing secondary identifiers (e.g. UniProtKB), model organism databases (SGD, FlyBase...), translation to other biological concept (e.g. the molecule descibed is a protein but I could store an ensembl or entrez geneid). The [Data Distribution Best Practices](DataDistributionBestPractices.md) does give some additional information with respect to which specific cross reference to use.

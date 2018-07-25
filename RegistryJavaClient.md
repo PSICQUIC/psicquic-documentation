@@ -4,7 +4,7 @@ This page explains how to access the Registry using the provided Java client. If
 
 # Getting the client #
 
-You can download the client and its dependencies in the [Downloads section](http://code.google.com/p/psicquic/downloads/list), or use this Maven dependency in your project:
+You can download the client (release version 1.1.1) [here](https://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/org/hupo/psi/mi/psicquic/psicquic-registry-client/), or use this Maven dependency in your project:
 
   * Released versions
 ```
@@ -38,4 +38,4 @@ for (ServiceType service : services) {
 
 # Examples #
 
-Some examples can be found [here](http://code.google.com/p/intact/source/browse/repo#repo%2Fsite%2Ftrunk%2Fintact-course%2Fsrc%2Fmain%2Fjava%2Fintact%2Fsolution%2Fpsicquic%2Fregistry).
+For an implementation of the example above see [here](https://github.com/PSICQUIC/psicquic-registry-client/blob/master/src/main/java/org/hupo/psi/mi/psicquic/registry/client/registry/DefaultPsicquicRegistryClient.java).

@@ -1,9 +1,9 @@
-# MIQL 2.7 #
+# MIQL 2.8 #
 
 The Molecular Interactions Query Language (MIQL) defines a way to allow more powerful and flexible queries by using a specific syntax when doing searches. If we have a common way to access the data (PSICQUIC), we need a common way to write the search queries.
 In most cases, searches are done for a specific identifier or group of identifiers. However, the service is not limited to these. For instance, there are ways to search for specific organisms, interaction detection methods or publication identifiers. The MIQL defines how these kind of queries can be done.
 
-MIQL is a consensus between the different databases, so you should be able to use the same query across different repositories. It is based on the [PSIMITAB 2.7](MITAB27Format.md) format and allows to search for data in specific columns, by using the fields explained in the next section.
+MIQL is a consensus between the different databases, so you should be able to use the same query across different repositories. It is based on the [PSIMITAB 2.8](MITAB28Format.md) format and allows to search for data in specific columns, by using the fields explained in the next section.
 
 The MIQL syntax is based on [Lucene's syntax](http://lucene.apache.org/java/3_0_0/queryparsersyntax.html). A query is broken into terms and operators:
 
@@ -20,7 +20,7 @@ The MIQL syntax is based on [Lucene's syntax](http://lucene.apache.org/java/3_0_
 
 The following table shows the available standard fields that can be used in PSICQUIC searches:
 
-| **Field Name** | **Searches on** | **MITAB 2.7 Columns**| **Example** |
+| **Field Name** | **Searches on** | **MITAB 2.8 Columns**| **Example** |
 |:---------------|:----------------|:---------------------|:------------|
 | idA | Identifier A | 1 | `idA:P74565` |
 | idB | Identifier B | 2 |`idB:P74565` |
@@ -57,3 +57,8 @@ The following table shows the available standard fields that can be used in PSIC
 | pmethod | Participant identification methods (A or B) | 41, 42 | `pmethod:immunostaining` |
 | stc | Stoichiometry (A or B). Only true or false, just to be able to filter interaction having stoichiometry available | 39, 40 | `stc:true` |
 | param | Interaction parameters. Only true or false, just to be able to filter interaction having parameters available | 30 | `param:true` |
+| bioeffectA | Biological effect of participant A | 43 | `bioeffectA:"kinase activity"` |
+| bioeffectB | Biological effect of participant B | 44 | `bioeffectB:"antioxidant activity"` |
+| bioeffect | Biological effect of participant A or B | 43, 44 | `bioeffect:"molecular carrier activity"` |
+| causalmechanism | The indirect causal regulatory mechanism between participants A and B  | 45 | `causalmechanism:"MI:2245"` |
+| causalstatement | The causal statement describing the effect of participant A on participant B | 46 | `causalstatement:"up regulates"` |

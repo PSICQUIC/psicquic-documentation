@@ -1,8 +1,8 @@
-# Version 1.3 #
+# Version 1.4 #
 
 PSICQUIC is meant to be a RESTful service. Hence, it is possible to retrieve data using simple URLs through HTTP.
 
-[SOAP](PsicquicSpec_1_3_Soap.md) can be too cumbersome for some users or developers as usually a client may be needed. With REST, none of this is necessary because it is possible to do a query through HTTP and get the data back. The simplest way to do it is to do queries using your browser, but REST is a convenient way to access the data for scripts.
+[SOAP](PsicquicSpec_1_4_Soap.md) can be too cumbersome for some users or developers as usually a client may be needed. With REST, none of this is necessary because it is possible to do a query through HTTP and get the data back. The simplest way to do it is to do queries using your browser, but REST is a convenient way to access the data for scripts.
 
 Different methods are available using REST. It is possible to fetch data by using:
 
@@ -16,11 +16,16 @@ Other methods exist to get additional information about the service, such as spe
 
 ## Differences from previous versions ##
 
+### From version 1.3 ###
+
+  * Support all the fields of [MIQL 2.8](MiqlReference28.md)
+  * [MITAB 2.8](MITAB28Format.md) is supported (combatibility with previous versions is maintained)
+
 ### From version 1.2 ###
 
-  * Support all the fields of MIQL 2.7
+  * Support all the fields of [MIQL 2.7](MiqlReference27.md)
   * XGMML format is available without any restrictions in number of interactions
-  * MITAB 2.6 and MITAB 2.7 are supported
+  * [MITAB 2.6](MITAB26Format.md) and [MITAB 2.7](MITAB27Format.md) are supported
   * Now based on a SOLR index
   * Bug fixed when exporting in Biopax and RDF
   * Returns HTTP 400 error if we try to download more than 500 interactions in XML, Biopax or RDF in one request.
@@ -40,7 +45,7 @@ Other methods exist to get additional information about the service, such as spe
 
 The structure of the URL to fetch data from PSICQUIC is this one:
 
-![image_rest_url](/images/PSICQUIC_REST_URL_v1.3.png)
+![image_rest_url](/images/PSICQUIC_REST_URL_v1.4.png)
 
 e.g. http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/species:human?firstResult=0&maxResults=100
 
@@ -52,7 +57,7 @@ The first element of the URL is, of course, the location of the web service. Che
 
 #### VERSION ####
 
-At this moment 4 versions of PSICQUIC exist. With time, more versions might exist. The possible values for this bit are:
+At this moment there are 5 versions of PSICQUIC implemented. The possible values are:
 
 | **Version** | **Description** |
 |:------------|:----------------|
@@ -60,6 +65,7 @@ At this moment 4 versions of PSICQUIC exist. With time, more versions might exis
 | v1.1 | Version 1.1 of the REST PSICQUIC specification |
 | v1.2 | Version 1.2 of the REST PSICQUIC specification |
 | v1.3 | Version 1.3 of the REST PSICQUIC specification |
+| v1.4 | Version 1.4 of the REST PSICQUIC specification |
 | current | Will map always to the most current version. It works as a symbolic link |
 
 #### METHODS TO RETRIEVE MOLECULAR INTERACTION DATA ####
@@ -100,7 +106,6 @@ Whereas the rest of parts of the URL are mandatory, parameters are optional. We 
 | format           | Format of the returned data. See the next section for the possible values |
 | firstResult | Integer value that defines the first element to be shown. If the whole result set contains 100 interactions and we use firstResult=40, the first row to be returned will be the 40 |
 | maxResults | Integer value that defines the maximum number of interactions to be returned. For instance, a value of maxResults=20 will limit the results to 20 interactions. |
-| compressed | When the value of this parameter is "y" or "true" the data is returned gzipped. Modern browsers automatically deflate the file, but scripts may need to do it themselves. This is useful to speed up considerably the responses. |
 
 It is possible to iterate through the results using "pages" by changing the value of _firstResult_ while maintaining an immutable _maxResults_ value. For example:
 
@@ -122,6 +127,7 @@ This is the list of available formats:
 | tab25 | 1.0 | PSI-MITAB 2.5 |
 | tab26 | 1.3 | PSI-MITAB 2.6 |
 | tab27 | 1.3 | PSI-MITAB 2.7 |
+| tab28 | 1.4 | PSI-MITAB 2.8 |
 | xml25 | 1.0 | PSI-MIXML 2.5.4 |
 | count | 1.0 | Just the total count |
 | biopax | 1.2 | BioPAX - append -L2 or -L3 to the parameter if a specific level is desired |
@@ -140,24 +146,23 @@ Since the spec 1.2, in order to help understanding the content of a response wit
 | X-PSICQUIC-Count | Total count of results |
 | X-PSICQUIC-Impl | Name of the implementation |
 | X-PSICQUIC-Spec-Version | Version for the REST Spec used |
-| X-PSICQUIC-Supports-Compression | Whether the service supports compression |
 | X-PSICQUIC-Supports-Formats | List of supported formats |
 
 For example:
 
 ```
-$ curl -I "http://localhost:9090/psicquic/webservices/current/search/query/*?firstResult=0&maxResults=10"
+curl -I "http://localhost:9090/psicquic/webservices/current/search/query/*?firstResult=0&maxResults=10"
 
 HTTP/1.1 200 OK
+Content-Length: 0
 Content-Type: text/plain
-Content-Encoding: gzip
+Date: Wed, 18 Jul 2018 16:23:35 GMT
+X-PSICQUIC-Count: 2
 X-PSICQUIC-Impl: Reference Implementation
-X-PSICQUIC-Impl-Version: 1.3.5
-X-PSICQUIC-Spec-Version: 1.2
-X-PSICQUIC-Supports-Formats: xml25, tab25, biopax, xgmml, rdf-xml, rdf-xml-abbrev, rdf-n3, rdf-turtle, count
-X-PSICQUIC-Count: 93
-Date: Fri, 28 Oct 2011 14:43:09 GMT
-Server: Jetty(7.1.5.v20100705)
+X-PSICQUIC-Impl-Version: 1.3.15-SNAPSHOT
+X-PSICQUIC-Spec-Version: 1.4
+X-PSICQUIC-Supports-Formats: xml25, tab25, tab26, tab27, tab28, biopax, xgmml, rdf-xml, rdf-xml-abbrev, rdf-n3, rdf-turtle, count, biopax-L2, biopax-L3
+Server: Jetty(8.1.0.RC5)
 ```
 
 ## Error status codes ##

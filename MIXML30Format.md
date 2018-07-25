@@ -1,0 +1,2 @@
+- [PSI-MI XML 3.0.0 Schema documentation](https://rawgit.com/HUPO-PSI/miXML/master/3.0/doc/MIF300.html)
+- [XSD Schema 3.0.0](https://github.com/HUPO-PSI/miXML/blob/master/3.0/src/MIF300.xsd)

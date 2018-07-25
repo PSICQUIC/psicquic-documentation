@@ -6,7 +6,7 @@ The MITAB26 format is part of the PSI-MI 2.5 standard (1). It has been derived f
 
 (1) http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pubmed&pubmedid=17925023
 
-(2) http://www.psidev.info/index.php?q=node/60#tools
+(2) http://www.psidev.info/groups/molecular-interactions (Tools section)
 
 
 ## Column definitions ##
@@ -29,12 +29,12 @@ The column contents should be as follows:
   1. **Interaction identifier(s)** in the corresponding source database, represented by databaseName:identifier
   1. **Confidence score**. Denoted as scoreType:value. There are many different types of confidence score, but so far no controlled vocabulary. Thus the only current recommendation is to use score types consistently within one source. Multiple scores separated by "|".
   1. **Expansion**. Model used to convert n-ary interactions into binary interactions for purpose of export in MITAB file. The known expansions are none (if true binary interaction), spoke, matrix or bipartite.
-  1. **Biological role A** , taken from the corresponding http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A0500&termName=biological%20role, and represented as dataBaseName:identifier(biological role name), separated by "|".
-  1. **Biological role B** , taken from the corresponding http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A0500&termName=biological%20role, and represented as dataBaseName:identifier(biological role name), separated by "|".
-  1. **Experimental role A** , taken from the corresponding http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A0495&termName=experimental%20role, and represented as dataBaseName:identifier(experimental role name), separated by "|".
-  1. **Experimental role B** , taken from the corresponding http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A0495&termName=experimental%20role, and represented as dataBaseName:identifier(experimental role name), separated by "|".
-  1. **Interactor type A** , taken from the corresponding http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A0313&termName=interactor%20type, and represented as dataBaseName:identifier(interactor type name), separated by "|".
-  1. **Interactor type B** , taken from the corresponding http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A0313&termName=interactor%20type, and represented as dataBaseName:identifier(interactor type name), separated by "|".
+  1. **Biological role A** , taken from the corresponding [PSI-MI controlled Vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A0500&termName=biological%20role), and represented as dataBaseName:identifier(biological role name), separated by "|".
+  1. **Biological role B** , taken from the corresponding [PSI-MI controlled Vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A0500&termName=biological%20role), and represented as dataBaseName:identifier(biological role name), separated by "|".
+  1. **Experimental role A** , taken from the corresponding [PSI-MI controlled Vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A0495&termName=experimental%20role), and represented as dataBaseName:identifier(experimental role name), separated by "|".
+  1. **Experimental role B** , taken from the corresponding [PSI-MI controlled Vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A0495&termName=experimental%20role), and represented as dataBaseName:identifier(experimental role name), separated by "|".
+  1. **Interactor type A** , taken from the corresponding [PSI-MI controlled Vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A0313&termName=interactor%20type), and represented as dataBaseName:identifier(interactor type name), separated by "|".
+  1. **Interactor type B** , taken from the corresponding [PSI-MI controlled Vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A0313&termName=interactor%20type), and represented as dataBaseName:identifier(interactor type name), separated by "|".
   1. **Xref for interactor A**, for example the gene ontology cross references associated. Representation as databaseName:identifier(text). Multiple cross references separated by "|".
   1. **Xref for interactor B**, for example the gene ontology cross references associated. Representation as databaseName:identifier(text). Multiple cross references separated by "|".
   1. **Xref for the interaction**, for example the gene ontology cross references associated (components, etc.) or OMIM cross references. Representation as databaseName:identifier(text). Multiple cross references separated by "|".
