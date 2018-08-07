@@ -45,7 +45,7 @@ The following table shows the available standard fields that can be used in PSIC
 | pxrefB | Interactor xref B (or Identifier B) | 24, 2 | `pxrefB:"GO:0003824"` |
 | pxref | Interactor xrefs (A or B or Identifier A or Identifier B) | 23, 24, 1, 2 | `pxref:"catalytic activity"` |
 | xref | Interaction xrefs (or Interaction identifiers) | 25, 14 | `xref:nuclear pore` |
-| annot | Interaction annotations and tags | 26 | `annot:"internally curated"` |
+| annot | Interaction annotations and tags | 28 | `annot:"internally curated"` |
 | udate | Update date | 32 | `udate:[20100101 TO 20120101]` |
 | negative | Negative interaction boolean | 36 | `negative:true` |
 | complex | Complex expansion | 16 | `complex:"spoke expanded"` or `complex:"MI:1060"` |
