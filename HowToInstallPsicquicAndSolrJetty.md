@@ -106,7 +106,7 @@ The solr server will start with the PSICQUIC service using the same jetty server
 
   ```
   cd psicquic-solr-ws
-  mvn clean -Pstart-jetty-solr jetty:run -Dmaven.test.skip -Dsolr.workdir=/path/to/solr-workingdir
+  mvn clean install -Pstart-jetty-solr jetty:run -Dmaven.test.skip -Dsolr.workdir=/path/to/solr-workingdir
   ```
 
   where
