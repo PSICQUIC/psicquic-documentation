@@ -4,11 +4,11 @@ In addition to having all PSICQUIC services available via the Registry, some use
   * [Only IMEx data providers](http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&tags=imex+curation)
   * Only manually curated data
   * Only protein-protein interactions and not (text-mining or predicted)
-
+  * Only causal molecular interactions
 
 # Current tags #
 
-We have so far put together the 5 categories of tags described below:
+We have so far put together the 6 categories of tags described below:
 
 ### Interacting molecules (MI:1046) ###
   * protein-protein (MI:1047)
@@ -24,7 +24,7 @@ We have so far put together the 5 categories of tags described below:
   * mimix curation (MI:0960)
   * rapid curation (MI:0961)
 
-### source (MI:1053) ###
+### Source (MI:1053) ###
   * experimentally-observed (MI:1054)
   * internally-curated (MI:1055)
   * text-mining (MI:1056)
@@ -36,7 +36,10 @@ We have so far put together the 5 categories of tags described below:
   * matrix expansion (MI:1061)
   * bipartite expansion (MI:1062)
 
-You can refer to the [Registry](Registry.md#The-'tags'-parameter) documentation to find out how to use the tags to query for specific lists of services.
+### Causal interactions (MI:2233) ###
+  * causal interaction (MI:2233)
+
+You can refer to the [Registry](Registry.md#The-'tags'-parameter) documentation to find out how to use the tags to query for specific lists of services.PsicquicServiceTags.md
 
 # Current limitations #
 
