@@ -2,14 +2,14 @@
 
 ## Purpose ##
 
-This document focuses on several aspects of the [MITAB27 data representation](http://code.google.com/p/psicquic/wiki/MITAB27Format) in the context of data distribution via PSICQUIC services. As MITAB 2.7 is backward compatible with MITAB 2.5 and MITAB 2.6, the best practices also apply to these formats except for the new columns. The implementation of these best practices in the data served by a PSICQUIC services should improve users searches, data consistency and visualization as well as clustering of this data with other PSICQUIC services.
+This document focuses on several aspects of the [MITAB27 data representation](MITAB27Format.md) in the context of data distribution via PSICQUIC services. As MITAB 2.7 is backward compatible with MITAB 2.5 and MITAB 2.6, the best practices also apply to these formats except for the new columns. The implementation of these best practices in the data served by a PSICQUIC services should improve users searches, data consistency and visualization as well as clustering of this data with other PSICQUIC services.
 
 
 ## Best Practices ##
 
 ### A. Describing an Interacting Molecule ###
 
-Typically, an interacting molecule is described using up to 12 columns of the [MITAB format](http://code.google.com/p/psicquic/wiki/MITAB27Format):
+Typically, an interacting molecule is described using up to 12 columns of the [MITAB format](MITAB27Format.md):
 
 | **Column name** | **Columns for Interactor A** | **Columns for Interactor B** | **Definition** |
 |:----------------|:-----------------------------|:-----------------------------|:---------------|
@@ -168,7 +168,7 @@ The section K gives more information about how to tag interactions.
 
 | **Column** | **Data format** | **Example(s)** |
 |:-----------|:----------------|:---------------|
-| Paramaters of the interaction (col 30) | represented as type:value(text) where type is a parameter type name from the PSI-MI ontology. Multiple values can be separated by "&#124;". Special characters should not be allowed in MITAB so to represent exponents, fractions or the real values could be used. | kd:"2.34x1/100000" |
+| Paramaters of the interaction (col 30) | represented as type:value(text) where type is a parameter type name from the PSI-MI ontology. Multiple values can be separated by "&#124;". Special characters should not be allowed in MITAB so to represent exponents, fractions or the real values could be used. | kd:"4.0x2^5 ~0.3" |
 
 ### H. Describing stoichiometry and self interactions ###
 
@@ -220,24 +220,23 @@ Storing in a single MITAB line the content of multiple interaction evidence. The
 
 #### Should You Be Serving Clustered Data ? ####
 
-Clustering can be performed by a data provider and the clustered data be served by PSICQUIC. However, this practice is not optimal as far as user queries are concerned. For instance. if a service is serving a clustered interaction that aggregates evidences detected by 'yeast two hybrid' and 'pull down' and the user searches for `NOT "yeast two hybrid"`, the clustered line containing pull down would not be returned. The same problem can be reported for a service that is clustering two interactors from two different organisms but with the same sequence in the same column.
+Clustering can be performed by a data provider and the clustered data be served by PSICQUIC. However, this practice is not optimal as far as user queries are concerned. For instance, if a service is serving a clustered interaction that aggregates evidences detected by 'yeast two hybrid' and 'pull down' and the user searches for `NOT "yeast two hybrid"`, the clustered line containing pull down would not be returned. The same problem can be reported for a service that is clustering two interactors from two different organisms but with the same sequence in the same column.
 
 #### Clustering Algorithms ####
 
-Typically, clustering is performed by matching interacting molecule pairs using a predefined set of database cross references and aliases. For instance it could be performed by matching molecules based on !UniProtKB, RefSeq, rogid, chebi, standard inchi key. Hence, if the recommendation on how to describe an interacting molecule was followed, interaction evidence clustering should work efficiently.
+Typically, clustering is performed by matching interacting molecule pairs using a predefined set of database cross references and aliases. For instance it could be performed by matching molecules based on UniProtKB, RefSeq, rogid, chebi, standard inchi key. Hence, if the recommendation on how to describe an interacting molecule was followed, interaction evidence clustering should work efficiently.
 
 #### How To Present Clustered Data in MITAB ####
 
 Clustering is currently only run over the single line representation of data in the MITAB format, where multiples pieces of information are separated by ‘|’. As these pieces of information often do not have a 1:1 relationship, for example one interaction method may be related to multiple interaction types, relationships between information will inevitably be lost. There was some discussion and to whether it was worth retaining these relationships by duplicating information but it was generally agreed that the records would then be less human-readable (which is the main reason for producing MITAB in the first place), and that MITAB should only contain the summary of the cluster and in a long term solution, XML could be used for keeping the relationships.
 
-<br />
 ### L. Interaction Evidence Tagging ###
 
 Currently, PSICQUIC tagging is done by the PSICQUIC Registry. Tagging the PSICQUIC service in the registry is important because it gives information about the content of each PSICQUIC registry and can help to focus queries on specific services depending on what the user is looking for (mainly for optimisation). However, this tagging approach presents the obvious limitation that a service, which provides mixed datasets matching different tags, can only be in or out, as opposed to filtering the data it hosts. We will describe in this section some recommendation to implement tagging at the interaction evidence level.
 
 **What tags are currently available ?**
 
-The tags are fully integrated in the PSI-MI Ontology and they can be found [here](http://code.google.com/p/psicquic/wiki/PsicquicServiceTags).
+The tags are fully integrated in the PSI-MI Ontology and they can be found [here](PsicquicServiceTags.md).
 
 **Tags useful at the interaction level**
 <br />

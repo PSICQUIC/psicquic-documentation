@@ -22,7 +22,7 @@ Methods have been added to retrieve properties about the service.
 
 The structure of the URL to fetch data from PSICQUIC is this one:
 
-<img width='800' src='http://psicquic.googlecode.com/svn/wiki/images/rest_url/PSICQUIC_REST_URL.png' />
+![image_rest_url](/images/PSICQUIC_REST_URL_v1.3.png)
 
 e.g. http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/species:human?firstResult=0&maxResults=100
 
@@ -34,22 +34,20 @@ The first element of the URL is, of course, the location of the web service. Che
 
 #### VERSION ####
 
-At this moment only one version of PSICQUIC exist. With time, more versions might exist. The possible values for this bit are:
+At this moment 2 versions of PSICQUIC exist. With time, more versions might exist. The possible values for this bit are:
 
 | **Version** | **Description** |
 |:------------|:----------------|
 | v1.0 | Version 1.0 of the PSICQUIC specification |
 | v1.1 | Version 1.1 of the PSICQUIC specification |
-| v1.2 | Version 1.2 of the PSICQUIC specification |
-| v1.3 | Version 1.3 of the PSICQUIC specification |
 | current | Will map always to the most current version. It works as a symbolic link |
 
 #### METHODS TO RETRIEVE MOLECULAR INTERACTION DATA ####
 
 As we said before, there are different methods available to retrieve data:
 
-| **Method** | **Since spec version** **Description** |
-|:-----------|:---------------------------------------|
+| **Method** | **Since spec version** | **Description** |
+|:-----------|:-----------------------|:----------------|
 | interactor | v1.0 | To search using interactor identifiers or aliases |
 | interaction | v1.0 | To search using interaction identifiers |
 | query | v1.0 | To search using [MIQL](MiqlReference.md) queries |
@@ -59,8 +57,9 @@ As we said before, there are different methods available to retrieve data:
 
 These metadata methods return information about the service:
 
+| **Method** | **Since spec version** | **Description** |
+|:-----------|:-----------------------|:----------------|
 | property | v1.1 | To get the value of a property |
-|:---------|:-----|:-------------------------------|
 | properties | v1.1 | Lists all the available properties |
 | formats | v1.0 | Lists the return formats supported by the service |
 | version | v1.0 | Implementation version |

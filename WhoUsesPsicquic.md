@@ -6,7 +6,7 @@ This is the list of some of the projects that use PSICQUIC to query molecular in
 
   * **Cytoscape**: can create interation networks using a [PSICQUIC plugin](CytoscapeClient.md).
 
-  * **EnVision 2**: a visualization application for the [Enfin project](http://www.enfin.org). [[Link](http://www.ebi.ac.uk/enfin-srv/envision2/pages/homePage.jsf)]
+  * **EnVision 2**: a visualization application for the [Enfin project](http://www.enfin.org).
 
   * **IMEx Consortium**: the data search in the consortium page is based on PSICQUIC to query all the IMEx members on-the-fly. [[Link](http://www.imexconsortium.org/)] [[Publication](http://onlinelibrary.wiley.com/doi/10.1002/pmic.200700286/abstract)]
 

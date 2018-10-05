@@ -3,7 +3,7 @@
 The Molecular Interactions Query Language (MIQL) defines a way to allow more powerful and flexible queries by using a specific syntax when doing searches. If we have a common way to access the data (PSICQUIC), we need a common way to write the search queries.
 In most cases, searches are done for a specific identifier or group of identifiers. However, the service is not limited to these. For instance, there are ways to search for specific organisms, interaction detection methods or publication identifiers. The MIQL defines how these kind of queries can be done.
 
-MIQL is a consensus between the different databases, so you should be able to use the same query across different repositories. It is based on the [PSIMITAB 2.5](http://code.google.com/p/psicquic/wiki/MITAB25Format) format and allows to search for data in specific columns, by using the fields explained in the next section.
+MIQL is a consensus between the different databases, so you should be able to use the same query across different repositories. It is based on the [PSIMITAB 2.5](MITAB25Format.md) format and allows to search for data in specific columns, by using the fields explained in the next section.
 
 The MIQL syntax is based on [Lucene's syntax](http://lucene.apache.org/java/3_0_0/queryparsersyntax.html). A query is broken into terms and operators:
 

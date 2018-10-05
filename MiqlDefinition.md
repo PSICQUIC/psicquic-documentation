@@ -17,6 +17,7 @@ The MIQL syntax is based on [Lucene's syntax](http://lucene.apache.org/java/3_0_
 
 # Existing versions #
 
-There are two versions of MIQL language which have been implemented so far.
+There are three versions of MIQL language which have been implemented so far.
   * [MIQL 2.5](MiqlReference.md) is based on the [PSIMITAB 2.5](MITAB25Format.md) format
   * [MIQL 2.7](MiqlReference27.md) is an extension of MIQL 2.5 and is based on the [PSIMITAB 2.7](MITAB27Format.md) format.
+  * [MIQL 2.8](MiqlReference28.md) is an extension of MIQL 2.7 and is based on the [PSIMITAB 2.8](MITAB28Format.md) format.

@@ -8,10 +8,10 @@ The PSICQUIC Reference Implementation will be released from time to time. This p
 When everyone is happy about releasing a new version of the Reference Implementation, this must be done:
 
   * Change the version in the POM file and commit the change.
-  * Tag the project, running this command in the psicquic-ws folder.
+  * Tag the project, running this command in the psicquic-solr-ws folder.
 
 ```
-mvn scm:tag -Dtag=psicquic-webservice-1.2.0
+mvn scm:tag -Dtag=psicquic-solr-ws-1.3.15
 ```
 
   * Create an assembly with the sources and upload the tar.gz bundle to the project, so it will be available as a download.

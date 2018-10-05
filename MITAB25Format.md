@@ -6,7 +6,7 @@ The MITAB25 format is part of the PSI-MI 2.5 standard (1). It has been derived f
 
 (1) http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pubmed&pubmedid=17925023
 
-(2) http://www.psidev.info/index.php?q=node/60#tools
+(2) http://www.psidev.info/groups/molecular-interactions (Tools section)
 
 
 ## Column definitions ##
