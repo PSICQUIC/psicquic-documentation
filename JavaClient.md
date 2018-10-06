@@ -27,34 +27,23 @@ This client is the simplest way to access the services using Java. It provides n
 
 If you are using Maven, include the following in your project:
 
-  * Latest release version (recommended)
+  * Latest release version:
 
 ```
       <dependency>
           <groupId>org.hupo.psi.mi.psicquic</groupId>
           <artifactId>psicquic-simple-client</artifactId>
-          <version>1.3.4</version>
+          <version>1.4.0</version>
       </dependency>
 ```
 
-  * Current version under development
+This dependency is hosted at the European Bioinformatics Institute (EBI) repository. You can add this repository in your `pom.xml` file like this:
 
 ```
-      <dependency>
-          <groupId>org.hupo.psi.mi.psicquic</groupId>
-          <artifactId>psicquic-simple-client</artifactId>
-          <version>1.3.5-SNAPSHOT</version>
-      </dependency>
-```
-
-As of now, this dependency is hosted at the European Bioinformatics Institute (EBI) repository. You can add this repository in your `pom.xml` file like this:
-
-```
-     <repositories>
+    <repositories>
         <repository>
-            <id>nexus</id>
-            <name>European Bioinformatics Institute</name>
-            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/groups/public</url>
+            <id>nexus-ebi-release-repo</id>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/</url>
         </repository>
     </repositories>
 ```
@@ -65,48 +54,34 @@ You can find different examples in [this folder](https://github.com/PSICQUIC/psi
 
 ## PSICQUIC Client (Standard) ##
 
-A JAVA client is provided already by this project. If your project is using [Maven 2](http://maven.apache.org),  you can start using the client right away just by adding this dependencies to your project.
+A JAVA client is provided already by this project. If your project is using [Maven](http://maven.apache.org),  you can start using the client right away just by adding this dependencies to your project.
 
 Include the following dependency in your project:
 
-  * Latest released version
+  * Latest released version:
 
 ```
       <dependency>
           <groupId>org.hupo.psi.mi.psicquic</groupId>
           <artifactId>psicquic-client</artifactId>
-          <version>1.5.3</version>
+          <version>1.6.0</version>
       </dependency>
 ```
 
-  * Current version under development
-
-```
-      <dependency>
-          <groupId>org.hupo.psi.mi.psicquic</groupId>
-          <artifactId>psicquic-client</artifactId>
-          <version>1.5.4-SNAPSHOT</version>
-      </dependency>
-```
-
-As of now, this dependency is hosted at the European Bioinformatics Institute (EBI) repository. You can add this repository in your `pom.xml` file like this:
+This dependency is hosted at the European Bioinformatics Institute (EBI) repository. You can add this repository in your `pom.xml` file like this:
 
 ```
     <repositories>
         <repository>
-            <id>intact.nexus</id>
-            <name>IntAct Nexus</name>
-            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/groups/public</url>
+            <id>nexus-ebi-release-repo</id>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/</url>
         </repository>
     </repositories>
 ```
 
-Examples on how to use the client can be found [here](https://github.com/PSICQUIC/psicquic-client/tree/master/src/example/java/org/hupo/psi/mi/psicquic/example).
-
-
 ### Examples of Use ###
 
-You can use code like [this one](https://github.com/PSICQUIC/psicquic-client/tree/master/src/example/java/org/hupo/psi/mi/psicquic/example) to start using the PSICQUIC service.
+You can find different examples in [this folder](https://github.com/PSICQUIC/psicquic-client/tree/master/src/example/java/org/hupo/psi/mi/psicquic/example) to start using the PSICQUIC service.
 
 ### Building the client from sources ###
 

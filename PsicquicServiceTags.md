@@ -39,11 +39,12 @@ We have so far put together the 6 categories of tags described below:
 ### Causal interactions (MI:2233) ###
   * causal interaction (MI:2233)
 
-You can refer to the [Registry](Registry.md#The-'tags'-parameter) documentation to find out how to use the tags to query for specific lists of services.PsicquicServiceTags.md
+
+You can refer to the [Registry](Registry.md#the-tags-parameter) documentation to find out how to use the tags to query for specific lists of PSICQUIC services based on the tagging of their data content.
 
 # Current limitations #
 
 For the time being the definition of tags is done as a manual curation effort by the maintainers of the PSICQUIC Registry with input from PSICQUIC service providers. The current strategy has been adopted because it could be put in place quickly but suffers from a number of limitations, namely:
   * currently the tags are set to describe a PSICQUIC service as a whole
   * the current tagging strategy do not allow to isolate specific part of the dataset and that further development is already planned to enable that feature.
-  * that multiple tags per category can be used to describe specific conditions, for instance, if a provider has included manually curated data of their own as well as imported data from a third party source, both the tags 'imported' and 'internally-curated' should be used. This will now allow users to discriminate the underlying interactions but it is still very informative.
+  * that multiple tags per category can be used to describe specific conditions, for instance, if a provider has included manually curated data of their own as well as imported data from a third party source, both the tags **imported** and **internally-curated** should be used. This will now allow users to discriminate the underlying interactions but it is still very informative.

@@ -16,12 +16,12 @@ The following table summarises the different parameters that can be passed to th
 
 | **Parameter** | **Mandatory** | **Default** | **Description** |
 | :--- | :--- | :--- | :--- |
-| [action](#The-'action'-parameter) | Yes |  | The action to be done |
-| [format](#The-'format'-parameter) | No |  | The format to use when viewing the registry |
-| [name](#The-'name'-parameter) | No |  | Filters the list by name |
-| [protocol](#The-'protocol'-parameter) | No | soap | Allows to retrieve soap or rest urls from the services |
-| [restricted](#The-'restricted'-parameter) | No | y | Allows to filter the restricted services from the list |
-| [tags](#The-'tags'-parameter) | No |  | Allows to filter by tag the services from the list |
+| [action](#the-action-parameter) | Yes |  | The action to be done |
+| [format](#the-format-parameter) | No |  | The format to use when viewing the registry |
+| [name](#the-name-parameter) | No |  | Filters the list by name |
+| [protocol](#the-protocol-parameter) | No | soap | Allows to retrieve soap or rest urls from the services |
+| [restricted](#the-restricted-parameter) | No | y | Allows to filter the restricted services from the list |
+| [tags](#the-tags-parameter) | No |  | Allows to filter by tag the services from the list |
 
 ### Parameters
 

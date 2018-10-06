@@ -2,7 +2,7 @@
 
 ## Purpose ##
 
-One of the aim of this guideline is to provide the community with a tool that could help adding useful information to an existing MITAB 27 dataset (but because MITAB 2.7 is backward compatible with MITAB 2.5 and 2.6, the enricher can be used in MITAB 2.5 and 2.6 but will add less information than in MITAB 2.7). A tool, (referred later on as “Enricher”) could consume MITAB data, add extra information about molecules, controlled vocabularies, publication and return enriched MITAB content which follows the [Data best practices](DataDistributionBestPractices.md). Below are a few data items that could be enriched automatically:
+One of the aim of this guideline is to provide the community with a tool that could help adding useful information to an existing MITAB 2.7 dataset (but because MITAB 2.7 is backward compatible with MITAB 2.5 and 2.6, the enricher can be used in MITAB 2.5 and 2.6 but will add less information than in MITAB 2.7). A tool, (referred later on as “Enricher”) could consume MITAB data, add extra information about molecules, controlled vocabularies, publication and return enriched MITAB content which follows the [Data best practices](DataDistributionBestPractices.md). Below are a few data items that could be enriched automatically:
   * molecule identifiers, aliases, xrefs and checksum
   * Controlled vocabulary terms could have their names added provided an ontology identifier is present, eg:
     * interaction detection method (column #7),

@@ -14,7 +14,7 @@ This instructions are aimed to those who want to have its local instance of the 
 
 * Clone the code :
 
-    `git clone --branch psicquic-solr-1.2.7 https://github.com/PSICQUIC/psicquic-solr.git psicquic-solr-1.2.7`
+    `git clone https://github.com/PSICQUIC/psicquic-solr.git`
 
 * Copy solr-home directory (psicquic-solr/src/main/resources/solr-home/) in your solr working directory:
 
@@ -22,19 +22,19 @@ This instructions are aimed to those who want to have its local instance of the 
 
 ## Starting solr server
 
-The solr.war file is available in (psicquic-solr/src/main/resources/solr.war or you can download the solr 3.6.2 package from apache website [http://archive.apache.org/dist/lucene/solr/3.6.2/](http://archive.apache.org/dist/lucene/solr/3.6.2/)
+The solr.war file is available in `psicquic-solr/src/main/resources/solr.war` or you can download the solr 3.6.2 package from apache website [http://archive.apache.org/dist/lucene/solr/3.6.2/](http://archive.apache.org/dist/lucene/solr/3.6.2/)
 
-In the environment of your solr server, it is important to set the variable solr.solr.home which will point to the solr-home folder that you copied in your system. More information about how to install solr is available here [http://wiki.apache.org/solr/SolrInstall](http://wiki.apache.org/solr/SolrInstall)
+In the environment of your solr server, it is important to set the variable `solr.solr.home` which will point to the solr-home folder that you copied in your system. More information about how to install solr is available here [http://wiki.apache.org/solr/SolrInstall](http://wiki.apache.org/solr/SolrInstall)
 
 # Obtaining the Reference Implementation source code
 
 There are two ways to obtain the source code:
 
-* From the download section, downloading psicquic-solr-ws-1.3.15.zip [https://github.com/PSICQUIC/psicquic-solr-ws/releases/tag/psicquic-solr-ws-1.3.15](https://github.com/PSICQUIC/psicquic-solr-ws/releases/tag/psicquic-solr-ws-1.3.15)
+* Download the [psicquic-solr-ws-1.4.0.zip](https://github.com/PSICQUIC/psicquic-solr-ws/releases/tag/psicquic-solr-ws-1.4.0)
 
 * Using a git client, clone the code
 
-  `git clone --branch psicquic-solr-ws-1.3.15 https://github.com/PSICQUIC/psicquic-solr-ws.git psicquic-solr-ws-1.3.15`
+  `git clone https://github.com/PSICQUIC/psicquic-solr-ws.git`
 
 
 # Building the index
@@ -45,26 +45,28 @@ The Reference Implementation uses SOLR (based on LUCENE) to index the data. This
 
 When the indexing job starts, it creates a file _target/mitabIndexJob\_currentTimeMillis_ which contains the job ID of the indexing process. This job ID will be necessary if you want to restart the indexing process from where it failed in case of a badly formatted MITAB line for instance.
 
-* You can run this bash script:
+  * You can run this bash script:
 
-```
-cd psicquic-solr-ws
-bash indexMitabWithSolrUrl.sh /path/to/mitab-file solr-server-url
-```
+  ```
+  cd psicquic-solr-ws
+  bash indexMitabWithSolrUrl.sh /path/to/mitab-file solr-server-url
+  ```
 
-    where
+  where
+
     * **/path/to/mitab-file** is the path to the MITAB file to index. This argument is mandatory.
-    * **solr-server-url** is the URL of your solr server. By default if not provided, it is [http://localhost:9090/solr/](http://localhost:9090/solr/).
-    * 
+    * **solr-server-url** is the URL of your solr server. By default if not provided, it is [http://localhost:9090/solr/](http://localhost:9090/solr/). 
 
-* The indexing can be executed using the Maven command (used by the bash script):
 
-```
-cd psicquic-solr-ws
-mvn clean install -PcreateIndexWithSolrRunning -DmitabFile=/path/to/mitab-file -DsolrUrl=solr-server-url -Dmaven.test.skip
-```
+  * The indexing can be executed using the Maven command (used by the bash script):
 
-    where
+  ```
+  cd psicquic-solr-ws
+  mvn clean install -PcreateIndexWithSolrRunning -DmitabFile=/path/to/mitab-file -DsolrUrl=solr-server-url -Dmaven.test.skip
+  ```
+
+  where
+
     * **/path/to/mitab-file** is the path to the MITAB file to index. This argument is mandatory.
     * **solr-server-url** is the URL of your solr server. By default if not provided, it is [http://localhost:9090/solr/](http://localhost:9090/solr/).
 
@@ -72,27 +74,29 @@ mvn clean install -PcreateIndexWithSolrRunning -DmitabFile=/path/to/mitab-file -
 
 It can happen that the indexing process fails (bad formatted MITAB line for instance, solr server down, etc.). In this case you may want to restart the indexing process from where it failed (after fixing the badly formatted line for instance). Look at the job ID in the file target/mitabIndexJob_currentTimeMillis and then you have two ways of restarting the indexing:
 
-* You can run this bash script :
+  * You can run this bash script :
 
-```
-cd psicquic-solr-ws
-bash restartIndexMitabWithSolrUrl.sh /path/to/mitab-file job-ID solr-server-url
-```
+  ```
+  cd psicquic-solr-ws
+  bash restartIndexMitabWithSolrUrl.sh /path/to/mitab-file job-ID solr-server-url
+  ```
 
-    where
+  where
+
     * **/path/to/mitab-file** is the path to the MITAB file to index. This argument is mandatory.
     * **job-ID** is the job ID in the file target/mitabIndexJob_currentTimeMillis generated by the indexing script that failed. This argument is mandatory.
     * **solr-server-url** is the URL of your solr server. By default if not provided, it is [http://localhost:9090/solr/](http://localhost:9090/solr/).
 
 
-* The script can be executed using the Maven command (used by the bash script) :
+  * The script can be executed using the Maven command (used by the bash script) :
 
-```
-cd psicquic-solr-ws
-mvn install -PrestartIndexWithSolrRunning -Dmitab.file=/path/to/mitab-file -DsolrUrl=solr-server-url -Dindexing.id=job-ID -Dmaven.test.skip
-```
+  ```
+  cd psicquic-solr-ws
+  mvn install -PrestartIndexWithSolrRunning -Dmitab.file=/path/to/mitab-file -DsolrUrl=solr-server-url -Dindexing.id=job-ID -Dmaven.test.skip
+  ```
 
-    where
+  where
+
     * **/path/to/mitab-file** is the path to the MITAB file to index. This argument is mandatory.
     * **job-ID** is the job ID in the file target/mitabIndexJob_currentTimeMillis generated by the indexing script that failed. This argument is mandatory.
     * **solr-server-url** is the URL of your solr server. By default if not provided, it is [http://localhost:9090/solr/](http://localhost:9090/solr/).
@@ -103,24 +107,26 @@ mvn install -PrestartIndexWithSolrRunning -Dmitab.file=/path/to/mitab-file -Dsol
 
 You can use jetty to start the psicquic service (good for testing but can be used in production as well)
 
-* You can run this bash script :
+  * You can run this bash script :
 
-```
-cd psicquic-solr-ws
-bash startPsicquicServerOnly.sh solr-server-url
-```
-    where
+  ```
+  cd psicquic-solr-ws
+  bash startPsicquicServerOnly.sh solr-server-url
+  ```
+  where
+   
     * **solr-server-url** is the URL of your solr server. By default if not provided, it is [http://localhost:9090/solr/](http://localhost:9090/solr/).
 
 
-* The PSICQUIC service and solr can be started using the Maven command (used by the bash script) :
+  * The PSICQUIC service and solr can be started using the Maven command (used by the bash script) :
 
-```
-cd psicquic-solr-ws
-mvn clean jetty:run -Dmaven.test.skip -DsolrUrl=solr-server-url
-```
+  ```
+  cd psicquic-solr-ws
+  mvn clean jetty:run -Dmaven.test.skip -DsolrUrl=solr-server-url
+  ```
 
-    where
+  where
+
     * **solr-server-url** is the URL of your solr server. By default if not provided, it is [http://localhost:9090/solr/](http://localhost:9090/solr/).
 
 Note that if you get an error like **Address already in use**, then you have to setup the solr server on a different port than 9090 (which is used by default by the psicquic service).
