@@ -4,24 +4,24 @@ This page explains how to access the Registry using the provided Java client. If
 
 # Getting the client #
 
-You can download the client (release version 1.1.1) [here](https://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/org/hupo/psi/mi/psicquic/psicquic-registry-client/), or use this Maven dependency in your project:
+You can download the latest client release version [here](https://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/org/hupo/psi/mi/psicquic/psicquic-registry-client/), or use this Maven dependency in your project:
 
-  * Released versions
 ```
-<dependency>
-   <groupId>org.hupo.psi.mi.psicquic</groupId>
-   <artifactId>psicquic-registry-client</artifactId>
-   <version>1.1.1</version>
-</dependency>
+    <dependency>
+        <groupId>org.hupo.psi.mi.psicquic</groupId>
+        <artifactId>psicquic-registry-client</artifactId>
+        <version>1.4.0</version>
+    </dependency>
 ```
+This dependency is hosted at the European Bioinformatics Institute (EBI) repository. You can add this repository in your `pom.xml` file like this:
 
-  * Current version under development
 ```
-<dependency>
-   <groupId>org.hupo.psi.mi.psicquic</groupId>
-   <artifactId>psicquic-registry-client</artifactId>
-   <version>1.1.2-SNAPSHOT</version>
-</dependency>
+    <repositories>
+        <repository>
+            <id>nexus-ebi-release-repo</id>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/</url>
+        </repository>
+    </repositories>
 ```
 
 # Usage #

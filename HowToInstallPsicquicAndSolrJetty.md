@@ -11,11 +11,11 @@ This instructions are aimed to those who want to have its local instance of the 
 
 There are two ways to obtain the source code:
 
-* From the download section, downloading psicquic-solr-ws-1.3.15.zip [https://github.com/PSICQUIC/psicquic-solr-ws/releases/tag/psicquic-solr-ws-1.3.15](https://github.com/PSICQUIC/psicquic-solr-ws/releases/tag/psicquic-solr-ws-1.3.15)
+* Download the [psicquic-solr-ws-1.4.0.zip](https://github.com/PSICQUIC/psicquic-solr-ws/releases/tag/psicquic-solr-ws-1.4.0)
 
 * Using a git client, clone the code
 
-  `git clone --branch psicquic-solr-ws-1.3.15 https://github.com/PSICQUIC/psicquic-solr-ws.git psicquic-solr-ws-1.3.15`
+  `git clone https://github.com/PSICQUIC/psicquic-solr-ws.git`
 
 # Creating a solr working directory #
 

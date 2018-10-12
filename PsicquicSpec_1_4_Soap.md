@@ -34,11 +34,11 @@ Methods to retrieve properties from the service have been added. These propertie
 
 | Method Name | Description |
 |:------------|:------------|
-| **[getByQuery](#Method:-getByQuery)** | Retrieve data using a [MIQL query](MiqlDefinition.md) |
-| **[getByInteractor](#Method:-getByInteractor)** | Retrieve data using a specific participant identifier |
-| **[getByInteractorList](#Method:-getByInteractorList)** | Retrieve data using a list of participant identifiers. This method can be used to retrieve interactions where the two or more participants passed as arguments are found. To do so, set the operand to _AND_. |
-| **[getByInteraction](#Method:-getByInteraction)** | Retrieve a specific interaction using its identifier |
-| **[getByInteractionList](#Method:-getByInteractionList)** | Retrieve a list of interactions, using the identifiers |
+| **[getByQuery](#method-getbyquery)** | Retrieve data using a [MIQL query](MiqlDefinition.md) |
+| **[getByInteractor](#method-getbyinteractor)** | Retrieve data using a specific participant identifier |
+| **[getByInteractorList](#method-getbyinteractorlist)** | Retrieve data using a list of participant identifiers. This method can be used to retrieve interactions where the two or more participants passed as arguments are found. To do so, set the operand to _AND_. |
+| **[getByInteraction](#method-getbyinteraction)** | Retrieve a specific interaction using its identifier |
+| **[getByInteractionList](#method-getbyinteractionlist)** | Retrieve a list of interactions, using the identifiers |
 
 
 Other methods to retrieve information about the service itself (metadata) are also available:
@@ -66,13 +66,13 @@ This section explains the parameters that can be used in the above methods.
 | **Name** | **Type** | **Required** | **Description** | **Example(s)** |
 |:---------|:---------|:-------------|:----------------|:---------------|
 | query  | String  | Yes | The [MIQL query](MiqlReference.md) to use |  |
-| infoRequest  | [infoRequest](#infoRequest)  | Yes | Used to describe the format our to define the pagination |  |
+| infoRequest  | [infoRequest](#inforequest)  | Yes | Used to describe the format our to define the pagination |  |
 
 **Output parameters**:
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| queryResponse | [queryResponse](#queryResponse) | Complex object containing the resulting data and some metadata about the results |
+| queryResponse | [queryResponse](#queryresponse) | Complex object containing the resulting data and some metadata about the results |
 
 
 ### Method: getByInteractor ###
@@ -83,14 +83,14 @@ This section explains the parameters that can be used in the above methods.
 
 | **Name** | **Type** | **Required** | **Description** | **Example(s)** |
 |:---------|:---------|:-------------|:----------------|:---------------|
-| dbRef  | [dbRef](#dbRef)  | Yes | The identifier to search for |  |
-| infoRequest  | [infoRequest](#infoRequest)  | Yes | Used to describe the format our to define the pagination |  |
+| dbRef  | [dbRef](#dbref)  | Yes | The identifier to search for |  |
+| infoRequest  | [infoRequest](#inforequest)  | Yes | Used to describe the format our to define the pagination |  |
 
 **Output parameters**:
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| queryResponse | [queryResponse](#queryResponse) | Complex object containing the resulting data and some metadata about the results |
+| queryResponse | [queryResponse](#queryresponse) | Complex object containing the resulting data and some metadata about the results |
 
 
 ### Method: getByInteractorList ###
@@ -101,15 +101,15 @@ This section explains the parameters that can be used in the above methods.
 
 | **Name** | **Type** | **Required** | **Description** | **Example(s)** |
 |:---------|:---------|:-------------|:----------------|:---------------|
-| dbRefs  | List of [dbRef](#dbRef)  | Yes | The identifiers to search for |  |
-| infoRequest  | [infoRequest](#infoRequest)  | Yes | Used to describe the format our to define the pagination |  |
+| dbRefs  | List of [dbRef](#dbref)  | Yes | The identifiers to search for |  |
+| infoRequest  | [infoRequest](#inforequest)  | Yes | Used to describe the format our to define the pagination |  |
 | Operand | String | No | When multiple identifiers are provided two options are possible, dependening if we want to (a) find the interaction where ALL the provided identifiers are found or (b) just get a list of interactions where ANY of the identifiers is found. For (a) the value of _operand_ is '**AND**', whereas for (b) is '**OR**' (default) | AND, <br />OR |
 
 **Output parameters**:
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| queryResponse | [queryResponse](#queryResponse) | Complex object containing the resulting data and some metadata about the results |
+| queryResponse | [queryResponse](#queryresponse) | Complex object containing the resulting data and some metadata about the results |
 
 
 ### Method: getByInteraction ###
@@ -120,14 +120,14 @@ This section explains the parameters that can be used in the above methods.
 
 | **Name** | **Type** | **Required** | **Description** | **Example(s)** |
 |:---------|:---------|:-------------|:----------------|:---------------|
-| dbRef  | [dbRef](#dbRef)  | Yes | The identifier to search for |  |
-| infoRequest  | [infoRequest](#infoRequest)  | Yes | Used to describe the format our to define the pagination |  |
+| dbRef  | [dbRef](#dbref)  | Yes | The identifier to search for |  |
+| infoRequest  | [infoRequest](#inforequest)  | Yes | Used to describe the format our to define the pagination |  |
 
 **Output parameters**:
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| queryResponse | [queryResponse](#queryResponse) | Complex object containing the resulting data and some metadata about the results |
+| queryResponse | [queryResponse](#queryresponse) | Complex object containing the resulting data and some metadata about the results |
 
 
 ### Method: getByInteractionList ###
@@ -138,14 +138,14 @@ This section explains the parameters that can be used in the above methods.
 
 | **Name** | **Type** | **Required** | **Description** | **Example(s)** |
 |:---------|:---------|:-------------|:----------------|:---------------|
-| dbRefs  | List of [dbRef](#dbRef)  | Yes | The identifiers to search for |  |
-| infoRequest  | [infoRequest](#infoRequest)  | Yes | Used to describe the format our to define the pagination |  |
+| dbRefs  | List of [dbRef](#dbref)  | Yes | The identifiers to search for |  |
+| infoRequest  | [infoRequest](#inforequest)  | Yes | Used to describe the format our to define the pagination |  |
 
 **Output parameters**:
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| queryResponse | [queryResponse](#queryResponse) | Complex object containing the resulting data and some metadata about the results |
+| queryResponse | [queryResponse](#queryresponse) | Complex object containing the resulting data and some metadata about the results |
 
 
 ## Complex Objects ##
@@ -173,8 +173,8 @@ When doing queries, the results must be paginated to avoid memory problems. All 
 
 | **Name** | **Type** | **Description** |
 |:---------|:---------|:----------------|
-| resultSet | [resultSet](#resultSet) | Contains the results of the query |
-| resultInfo | [resultInfo](#resultInfo) | Information about the query, such as the total number of results found |
+| resultSet | [resultSet](#resultset) | Contains the results of the query |
+| resultInfo | [resultInfo](#resultinfo) | Information about the query, such as the total number of results found |
 
 ### resultSet ###
 

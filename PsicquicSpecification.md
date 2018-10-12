@@ -60,8 +60,8 @@ The most important changes since version 1.2 is the support of MITAB 2.6 and MIT
   * Limitation of 500 interactions when exporting in XML, Biopax and RDF. PSICQUIC returns a HTTP 400 error when trying to download more than 500 interactions at once in XML. Pagination is strongly recommended.
   * By default, negative interactions are excluded from the results returned by PSICQUIC. If a user wants to export both positive and negative interactions, he has to add a filter negative:(true OR false) to the query. Negative interactions cannot be exported with format tab25.
 
-  # Version 1.4 #
+# Version 1.4 #
 
-  Detailed documents about the version 1.4 of the specification are available [here for SOAP](PsicquicSpec_1_4_Soap.md) and [here for REST](PsicquicSpec_1_4_Rest.md).
+Detailed documents about the version 1.4 of the specification are available [here for SOAP](PsicquicSpec_1_4_Soap.md) and [here for REST](PsicquicSpec_1_4_Rest.md).
 
-  The most important change since version 1.3 is the support of the MITAB 2.8 format for the REST service. It is supporting all the fields of [MIQL 2.8](MiqlReference28.md) and is based on a solr index.
+The most important change since version 1.3 is the support of the MITAB 2.8 format for the REST service. It is supporting all the fields of [MIQL 2.8](MiqlReference28.md) and is based on a solr index.

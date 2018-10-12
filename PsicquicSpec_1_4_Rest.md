@@ -187,9 +187,7 @@ REST relies on direct HTTP communication. Errors are reported using HTTP status 
   * Getting the result for "brca2\_human" using the Uniprot accession P51587 in PSI-MITAB 2.7 format
 > http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/interactor/P51587?format=tab27
 
-The number of results in both cases is the same:
-
-
+  * The number of results in both cases is the same:
 > http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/interactor/brca2_human?format=count
 > http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/interactor/P51587?format=count
 
