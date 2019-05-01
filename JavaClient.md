@@ -43,6 +43,7 @@ This dependency is hosted at the European Bioinformatics Institute (EBI) reposit
     <repositories>
         <repository>
             <id>nexus-ebi-release-repo</id>
+            <name>European Bioinformatics Institute</name>
             <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/</url>
         </repository>
     </repositories>
@@ -74,6 +75,7 @@ This dependency is hosted at the European Bioinformatics Institute (EBI) reposit
     <repositories>
         <repository>
             <id>nexus-ebi-release-repo</id>
+            <name>European Bioinformatics Institute</name>
             <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/</url>
         </repository>
     </repositories>
