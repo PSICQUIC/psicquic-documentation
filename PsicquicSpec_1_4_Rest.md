@@ -20,6 +20,7 @@ Other methods exist to get additional information about the service, such as spe
 
   * Support all the fields of [MIQL 2.8](MiqlReference28.md)
   * [MITAB 2.8](MITAB28Format.md) is supported (combatibility with previous versions is maintained)
+  * RDF format support is no longer maintained
 
 ### From version 1.2 ###
 
@@ -27,15 +28,17 @@ Other methods exist to get additional information about the service, such as spe
   * XGMML format is available without any restrictions in number of interactions
   * [MITAB 2.6](MITAB26Format.md) and [MITAB 2.7](MITAB27Format.md) are supported
   * Now based on a SOLR index
-  * Bug fixed when exporting in Biopax and RDF
-  * Returns HTTP 400 error if we try to download more than 500 interactions in XML, Biopax or RDF in one request.
+  * Bug fixed when exporting in Biopax
+  * RDF format support is no longer maintained
+  * Returns HTTP 400 error if we try to download more than 500 interactions in XML or Biopax in one request.
 
 ### From version 1.1 ###
 
   * Data can be retrieved in a compressed form to save bandwidth.
   * HTTP headers X-PSICQUIC-`*` are not part of the response.
   * XGMML format available.
-  * RDF and biopax format available
+  * Biopax format available
+  * RDF format support is no longer maintained
 
 ### From version 1.0 ###
 
@@ -132,10 +135,6 @@ This is the list of available formats:
 | count | 1.0 | Just the total count |
 | biopax | 1.2 | BioPAX - append -L2 or -L3 to the parameter if a specific level is desired |
 | xgmml | 1.2 | XGMML format, used in Cytoscape) |
-| rdf-xml | 1.2 | RDF in XML |
-| rdf-xml-abbrev | 1.2 | Less verbose XML-RDF |
-| rdf-n3 | 1.2 | RDF using N3 notation |
-| rdf-turtle | 1.2 | RDF using Turtle notation |
 
 ## HTTP Headers ##
 
@@ -161,7 +160,7 @@ X-PSICQUIC-Count: 2
 X-PSICQUIC-Impl: Reference Implementation
 X-PSICQUIC-Impl-Version: 1.3.15-SNAPSHOT
 X-PSICQUIC-Spec-Version: 1.4
-X-PSICQUIC-Supports-Formats: xml25, tab25, tab26, tab27, tab28, biopax, xgmml, rdf-xml, rdf-xml-abbrev, rdf-n3, rdf-turtle, count, biopax-L2, biopax-L3
+X-PSICQUIC-Supports-Formats: xml25, tab25, tab26, tab27, tab28, biopax, xgmml, count, biopax-L2, biopax-L3
 Server: Jetty(8.1.0.RC5)
 ```
 
@@ -173,7 +172,7 @@ REST relies on direct HTTP communication. Errors are reported using HTTP status 
 |:----------------|:----------------|
 | 200 | Not an error. Request is OK |
 | 406 | Format not supported |
-| 400 | Too many results for exporting in XML, Biopax and RDF |
+| 400 | Too many results for exporting in XML and Biopax |
 | 500 | Internal server error |
 
 
