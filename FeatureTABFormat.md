@@ -1,4 +1,4 @@
-# PSI-MI TAB 3.0 Format #
+# PSI-MI Feature TAB Format #
 
 ## Introduction ##
 
