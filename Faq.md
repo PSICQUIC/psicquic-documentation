@@ -3,7 +3,7 @@
 <br />
 
 ## Are there guidelines on how to create valid PSIMITAB ? ##
-The original format (version 2.5) itself was first described in [Kerrien et al. (2007)](http://www.ncbi.nlm.nih.gov/pubmed/17925023) but you can also find it as part of the PSI-MI and PSICQUIC documentation. These documents only describe the various columns of the PSIMITAB format (2.5, 2.6, 2.7, 2.8 and 3.0) and the syntax of the data that can be stored. In addition to the format, the PSI-MI workgroup has defined a guideline referred to as [Data Distribution Best Practices](DataDistributionBestPractices.md) that aims at standardising the use of the format to maximize its effectiveness. It is strongly recommended to read these documents before attempting to build a dataset using the [PSIMITAB 2.5](MITAB25Format.md), [PSIMITAB 2.6](MITAB26Format.md), [PSIMITAB 2.7](MITAB27Format.md) or [PSIMITAB 2.8](MITAB28Format.md) format.
+The original format (version 2.5) itself was first described in [Kerrien et al. (2007)](http://www.ncbi.nlm.nih.gov/pubmed/17925023) but you can also find it as part of the PSI-MI and PSICQUIC documentation. These documents only describe the various columns of the PSIMITAB format (2.5, 2.6, 2.7 and 2.8) and the syntax of the data that can be stored. In addition to the format, the PSI-MI workgroup has defined a guideline referred to as [Data Distribution Best Practices](DataDistributionBestPractices.md) that aims at standardising the use of the format to maximize its effectiveness. It is strongly recommended to read these documents before attempting to build a dataset using the [PSIMITAB 2.5](MITAB25Format.md), [PSIMITAB 2.6](MITAB26Format.md), [PSIMITAB 2.7](MITAB27Format.md) or [PSIMITAB 2.8](MITAB28Format.md) format.
 <br />
 
 
