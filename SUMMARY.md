@@ -23,7 +23,6 @@
         * [MITAB 2.6](MITAB26Format.md)
         * [MITAB 2.7](MITAB27Format.md)
         * [MITAB 2.8](MITAB28Format.md)
-        * [MITAB 3.0](MITAB30Format.md)
         * [FeatureTAB](FeatureTABFormat.md)
     * [PSI-MI XML](PSIMIXML.md)
         * [PSI-MI XML 2.5](MIXML25Format.md)
