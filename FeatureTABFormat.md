@@ -2,9 +2,13 @@
 
 ## Introduction ##
 
-PSI-MI FeatureTab is a new format, it take inspiration from the existing PSI-MI TAB 3.0 (1), which is actively supported by the MI worktrack. Most users will continue to use PSI-MI MITAB or PSI-MI XML2.5/3.0 to exchange experimental-based interaction data, the PSI-MI FeatureTab will be required only for specialist use cases.
+PSI-MI FeatureTab is a new format, it takes inspiration from the existing PSI-MI XML and tab-delimited formats (1, 2, 3), which is actively supported by the MI worktrack. Most users will continue to use PSI-MI MITAB or PSI-MI XML2.5/3.0 to exchange experimental-based interaction data, the PSI-MI FeatureTab will be required only for specialist use cases.
 
 (1) https://pmc.ncbi.nlm.nih.gov/articles/PMC5896046/
+
+(2) https://europepmc.org/article/MED/30602777
+
+(3) https://europepmc.org/article/MED/30793173
 
 
 ## Column definitions ##
