@@ -19,7 +19,7 @@ One of the aim of this guideline is to provide the community with a tool that co
 ## Data Enricher ##
 
 The Enricher could use the following resources to retrieve data:
-  * [Ontology Lookup Service](http://www.ebi.ac.uk/ontology-lookup/) (aka. OLS) to access the psi-mi ontology;
+  * [Ontology Lookup Service](https://www.ebi.ac.uk/ols4/) (aka. OLS) to access the psi-mi ontology;
   * [CiteExplore](http://www.ebi.ac.uk/citexplore/) to access publication details;
   * [UniProtKB](http://www.uniprot.org/) to access protein information, the sequence information could then be used to compute ROGID and CROGID;
   * [UniProt Taxonomy](http://www.uniprot.org/taxonomy/) to access species information;

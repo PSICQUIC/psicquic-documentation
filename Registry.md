@@ -73,7 +73,7 @@ The **restricted** parameter is optional. It can be used to hide from the list t
 
 #### The 'tags' parameter
 
-The **tags** parameter is optional. it can be used to select a specific list of PSICQUIC services based on the tagging of their data content. There are currently 5 data content main categories described on the [PsicquicServiceTags](PsicquicServiceTags.md) page. You can describe a specific tag by either using its name or its [MI ontology](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI) identifier \(e.g. MI:0960 is equivalent to 'imex curation'\). You can build a query using the boolean operators AND, OR and NOT.  
+The **tags** parameter is optional. it can be used to select a specific list of PSICQUIC services based on the tagging of their data content. There are currently 5 data content main categories described on the [PsicquicServiceTags](PsicquicServiceTags.md) page. You can describe a specific tag by either using its name or its [MI ontology](https://www.ebi.ac.uk/ols4/ontologies/mi) identifier \(e.g. MI:0960 is equivalent to 'imex curation'\). You can build a query using the boolean operators AND, OR and NOT.  
 Here are a few sample queries:
 
 | **Description** | **Query** | **URL** |

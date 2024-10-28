@@ -24,7 +24,7 @@ If you are using ChEBI, or any database identifier using reserved character such
 
 
 ## How can I easily browse the various ontology types of PSI-MI ? ##
-We recommend you use the [Ontology Lookup Service (OLS)](http://www.ebi.ac.uk/ontology-lookup/). You can browse the PSI-MI ontology as a simple tree structure here or perform the following searches from the OLS home page:
+We recommend you use the [Ontology Lookup Service (OLS)](https://www.ebi.ac.uk/ols4/). You can browse the PSI-MI ontology as a simple tree structure here or perform the following searches from the OLS home page:
 search by term name (with auto-completion),
 search by term id.
 <br />
@@ -57,7 +57,7 @@ When the user runs the same query on the clustered service, the response shows n
 
 
 ## How do I define confidence values ? ##
-Column 15 of MITAB was designed to accommodate this type of data. There are numerous methods in used and in most cases, data providers tend to design their own. For this reason, we have defined a set of controlled vocabulary terms to help categorising broad classes of scoring methods. You can view the current list on the [Ontology Lookup Service](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A1064&termName=interaction%20confidence).
+Column 15 of MITAB was designed to accommodate this type of data. There are numerous methods in used and in most cases, data providers tend to design their own. For this reason, we have defined a set of controlled vocabulary terms to help categorising broad classes of scoring methods. You can view the current list on the [Ontology Lookup Service](https://www.ebi.ac.uk/ols4/ontologies/mi/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FMI_1064).
 <br />
 
 
@@ -67,7 +67,7 @@ While providing a UniProtKB AC is a great start to providing a broadly accepted 
   * `orf name (e.g.uniprotkb:F14J9.23(orf name))`
   * `locus name (e.g. uniprotkb:At1g09570(locus name))`
   * `gene name synonym (e.g. uniprotkb:Protein ELONGATED HYPOCOTYL 8(gene name synonym))`
-The data type that can be used are defined in this branch of the [PSI-MI ontology](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI%3A0300&termName=alias%20type).
+The data type that can be used are defined in this branch of the [PSI-MI ontology](https://www.ebi.ac.uk/ols4/ontologies/mi/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FMI_0300).
 <br />
 
 

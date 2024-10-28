@@ -29,7 +29,7 @@ The column contents should be as follows:
 
 1. **Feature annotation**, contains specific comments, on free text, about the annotated feature that can be of interest.
 
-1. **Affected protein AC**, contains affected protein identifier (preferably UniProtKB accession, if available, Ex: uniprotkb:P12346). It is represented as databaseName:identifier, where databaseName is the name of the corresponding database as defined in the [PSI-MI controlled vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI:0444&termName=database%20citation), and identifier is the unique primary identifier of the molecule in the database.
+1. **Affected protein AC**, contains affected protein identifier (preferably UniProtKB accession, if available, Ex: uniprotkb:P12346). It is represented as databaseName:identifier, where databaseName is the name of the corresponding database as defined in the [PSI-MI controlled vocabulary](https://www.ebi.ac.uk/ols4/ontologies/mi/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FMI_0444), and identifier is the unique primary identifier of the molecule in the database.
 
 1. **Affected protein symbol**, contains the protein symbol  of the protein affected by a specific feature, as given by UniProtKB (EX. Gene name, DLG4).
 
@@ -45,7 +45,7 @@ The column contents should be as follows:
 
 1. **Interaction AC**, describes the interaction accession within our databases. This can be used to obtain further information about the interaction (EX.: EBI-489644; EBI-8285478).
 
-1. **Xref ID**, contains whenever is available the Xref Identifier associated to a feature.It is represented as databaseName:ac(text), where databaseName is the name of the corresponding database as defined in the [PSI-MI controlled vocabulary](http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI&termId=MI:0444&termName=database%20citation), and ac is the primary accession in the database. For example, the InterPro cross references associated to a binding domain. Multiple cross references separated by "|".
+1. **Xref ID**, contains whenever is available the Xref Identifier associated to a feature.It is represented as databaseName:ac(text), where databaseName is the name of the corresponding database as defined in the [PSI-MI controlled vocabulary](https://www.ebi.ac.uk/ols4/ontologies/mi/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FMI_0444), and ac is the primary accession in the database. For example, the InterPro cross references associated to a binding domain. Multiple cross references separated by "|".
 
 Empty columns should be represented with '-' to keep track of the columns.
 
